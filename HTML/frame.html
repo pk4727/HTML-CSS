@@ -1,0 +1,56 @@
+<!-- 
+## frameset is kept between </head> and </html> or inside html tag, herebody is not required.
+## in one time only one frame is working in one page either frameset or iframe.
+
+1.frameset= collection of frame                                             <frameset rows/cols="20%,80%">
+2.frame= part of page                                                       <frame name="uniquename" src="" scrolling="no/auto/yes" noresize>
+    name-> always unique for all frame
+    src-> use for link other page to this page
+    scrolling="no"-> use for not scrolling part in frame 
+    noresize-> is use for stop scrolling in frame
+    target="name"-> is use for open any page through url in frame ,but target is set in page from where link is generated and,name is frame part name
+
+3.iframe= (inline frame) which directly take any website in page            <iframe src="" width="" height="" scrolling="auto" frameborder="1/0" 
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <!--
+    <frameset rows="20%,80%">
+        <frame name="upper" src="index.html" scrolling="no" noresize ></frame>
+        <frameset cols="25%,75%">
+            <frame name="left" src="hosting_download.html"></frame>
+            <frame name="right" src="forms_list_table.html"></frame>
+        </frameset>
+    </frameset>
+    <noframeset>
+        <body>
+            <p>
+                your browser not supported frame so update browser !!!
+            </p>
+        </body>
+    </noframeset> -->
+
+    <body>
+        <iframe src="https://www.vishacademy.com" width="500px" height="500px" frameborder="1" scrolling="auto">
+            <P>iframe not supporting in your website update it !!!!</P>
+        </iframe>
+
+        <div>
+            <iframe width="200" height="200" src="https://www.youtube.com/embed/BsDoLVMnmZs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </body>
+</html>

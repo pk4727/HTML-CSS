@@ -1,0 +1,309 @@
+<!--
+    for creating border around any field                            <fieldset disabled/enabled>
+    for give name/identity to fieldset/border                       <legend> 
+    for creating form (which will collect data)                     <form name="" id="" action="urlname" method="post/get">
+    for give name/identity to the portion                           <label for="..name.."> ..message.. </label>
+
+    for input section of forms                                      <input type="" size="" maxlength="" value="" disabled="" placeholder="">
+        type        =datatype of input box eg-> [file(accept="type of file/*"),text,password,button,submit,image,reset,checkbox,radio,(select,optgroup,option),textarea,etc...]
+        size        =size of input box
+        maxlength   =maximum character which can be field in input box
+        value       =default value which is shown in input box
+        readonly    =use for copy/read the value of input box but not change
+        disabled    =use for read the value of input box but not copy/change
+        placeholder =use for give message in input box 
+
+    orderd list tag (charecter)                                     <ol>    [A,a,1,I,i,reversed]
+    unordered/bullet list tag (sign)                                <ul>    [square,circle,disc]
+    description list tag                                            <dl>
+    title in descriptiontag                                         <dd> 
+    description of title                                            <dt>
+    list tag for create list                                        <li>
+
+    table tag for creating table                                    <table>
+    caption tag for tablename                                       <caption>
+    head section of table                                           <thead>
+    body section of table                                           <tbody>
+        cell spacing -> distance between two cell
+        cell padding -> distance between cell and cell data
+        Row span -> merge row of given value(1,2,3...) 
+        col span -> merge column of given value(1,2,3..)
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>list or table</title>
+        <script>function fun1() { window.open("https://google.com") }</script>
+    </head>
+
+    <body>
+
+        <div>
+            <h4>forms portion:-</h4>
+            <pre>
+                <fieldset>
+                    <legend>legend form sample</legend>
+                <form name="forms1" id="forms1" action="urlname" method="get">
+                    <input type="file" accept="image/*">
+                    <label for="input1">input1=</label> <input type="text" size="default" maxlength="5" value="12345" disabled="disabled" >
+                    <label for="input2">input2=</label> <input type="text" name="text" id="text" placeholder="enter number">
+                    <label for="input2">password=</label> <input type="password" name="text" id="text" placeholder="enter password" maxlength="8">
+                    <fieldset>
+                    <input type="button" onclick="fun1()" value="open google by click(button1)" name="button" id="button1"></button>
+                    <input type="submit" value="click here for submit(button2)"></button>
+                    <input type="image" src="img/1.jpg" height="30">(button3)
+                    <input type="reset" value="clear all">(button4)
+                    </fieldset>
+                    <input type="checkbox"name="check" id="check1" >bike<input type="checkbox"name="check" id="check2" >car
+                    <label for="check">gender=</label> Male<input type="radio"name="gender" id="text1" >Female<input type="radio"name="gender" id="text2" >
+                    <label for="check">education=</label> 12th<input type="radio"name="edu" id="text1" >UG<input type="radio"name="edu" id="text2" >PG<input type="radio"name="edu" id="text3" >
+                    
+                    select any one:-
+                    <select>
+                        <option value=""></option>
+                        <option value="10th">10th</option>
+                        <option value="12th">12th</option>
+                        <option value="UG">UG</option>
+                        <option value="PG">PG</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                    or
+                    <select size="8" multiple>
+                        <optgroup label="lower">
+                            <option value="10th">10th</option>
+                            <option value="12th">12th</option>
+                        </optgroup>
+                        <optgroup label="higher"></optgroup>
+                            <option value="UG">UG</option>
+                            <option value="PG">PG</option>
+                        </optgroup>
+                            <option value="OTHER">OTHER</option>
+                    </select>
+
+                    <label for="check">feedback:-</label>
+                    <textarea rows="10" cols="20"  placeholder="enter feedback"></textarea>
+                </form>
+                </fieldset>
+            </pre>
+        </div>
+
+        <hr>
+        <div>
+            <h4>list portion:-</h4>
+            <list-type>
+                <ul type="square">
+                    <li>first type</li>
+                    <li>u=unorderd</li>
+                    <li>l=list</li>
+                </ul>
+                <ol type="A" reversed start="p">
+                    <li>second type</li>
+                    <li>o=orderd</li>
+                    <li>l=list</li>
+                </ol>
+                <dl>
+                    <ol type="1">
+                        <li>
+                            <dt>pradhuman:-</dt>
+                            <ol type="A">
+                                <li>
+                                    <dd>pradhuman is a web-devlopment student in this time.</dd>
+                                </li>
+                                <li>
+                                    <dd>He is a student of nit kolkata</dd>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <dt>deepak:-</dt>
+                            <ol type="a">
+                                <li>
+                                    <dd>deepak is a employ of railaway </dd>
+                                </li>
+                                <li>
+                                    <dd>In railway in technition grade c.</dd>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </dl>
+            </list-type>
+        </div>
+
+        <hr>
+        <div>
+            <h4>table portion:-</h4>
+            <a name="intable">
+                <table border="1" align="center" width="default" bgcolor=" blue" cellspacing="10px" cellpadding="10px">
+                    <caption>
+                        <h2>Details</h2>
+                    </caption>
+                    <thead>
+                        <tr bgcolor="red">
+                            <th>s.no/(colspan)</th>
+                            <th colspan="2">name/2c</th>
+                            <th colspan="2">village/2c</th>
+                            <th>country/default(1c)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>KM</td>
+                            <td>SD</td>
+                            <td colspan="2">
+                                <center>pindatand/2c</center>
+                            </td>
+                            <td rowspan="3">
+                                <center>india/3r</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>DK</td>
+                            <td>RV</td>
+                            <td>channai</td>
+                            <td>pindatand</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>PK</td>
+                            <td>NA</td>
+                            <td>kolkata</td>
+                            <td>NA</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <center>
+                                    <font color="yellow">congraculation!!</font>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+        </div>
+
+        <br>
+        <table border="1" align="center" width="90%">
+
+            <tr width="10%" height="100">
+                <td><img src="img/icon.ico" title="Logo" alt="Logo image not found"></td>
+                <td><img src="img/9.webp" title="header/banner" alt="Banner image not found" height="90"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <table border="1" align="center" width="98%">
+                        <td>
+                            <center>Home</center>
+                        </td>
+                        <td>
+                            <center>Product</center>
+                        </td>
+                        <td>
+                            <center>Gllary</center>
+                        </td>
+                        <td>
+                            <center>Career</center>
+                        </td>
+                        <td>
+                            <center>Event</center>
+                        </td>
+                        <td>
+                            <center>Contect us</center>
+                        </td>
+                    </table>
+                </td>
+            </tr>
+
+            <tr width="10%" height="100">
+                <td width="10%">
+                    <table border="1" align="center" width="95%">
+                        <tr>
+                            <td>Newsletter</td>
+                        </tr>
+                        <tr>
+                            <td>Feedback</td>
+                        </tr>
+                        <tr>
+                            <td>News</td>
+                        </tr>
+                        <tr>
+                            <td>Events</td>
+                        </tr>
+                        <tr>
+                            <td>More..</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table border="1" align="center" width="95%" height="95%" bgcolor=" gray" cellspacing="10px"
+                        cellpadding="10px">
+                        <thead>
+                            <tr bgcolor="red">
+                                <th>s.no/(colspan)</th>
+                                <th colspan="2">name/2c</th>
+                                <th colspan="2">village/2c</th>
+                                <th>country/default(1c)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>KM</td>
+                                <td>SD</td>
+                                <td colspan="2">
+                                    <center>pindatand/2c</center>
+                                </td>
+                                <td rowspan="3">
+                                    <center>india/3r</center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>DK</td>
+                                <td>RV</td>
+                                <td>channai</td>
+                                <td>pindatand</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PK</td>
+                                <td>NA</td>
+                                <td>kolkata</td>
+                                <td>NA</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <center>
+                                        <font color="yellow">congraculation!!</font>
+                                    </center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <h3>
+                            <font color="purple">welcome to pk page!!!</font>
+                        </h3>
+                    </center>
+                </td>
+            </tr>
+
+        </table>
+
+    </body>
+
+</html>

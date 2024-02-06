@@ -1,0 +1,149 @@
+<!-- 
+meta tag                                            <mata...   >
+attach css file always in head portion              <link rel=""...   >
+heading tag                                         <h4>
+background color                                    <body bgcolor="" ... >
+background imgage                                   <body background="" ... >
+text color                                          <font ...
+    face(for style of font)
+    size(size of font)
+    color(color of font)
+    
+html link for current page to other                 <a href="location"....>name</a>
+    link=link which is not visited                  <body link="colorname">
+    vlink=visited link color used in body tag       <body vlink="colorname">
+    alink=active link color used in body tag        <body alink="colorname">
+
+import image                                        <img ....   >
+    src     (path of image)
+    width   (width of image in page)
+    height  (height of image in page)
+    title   (name of image)
+    align   (position in page)
+    border  (border of image)
+    <centr> (then align is kept remove)
+    alt     (when image is not show then message show which is written in alt)
+
+attach javascript file (anywhere)                   <script src=""....  >
+horizontal rule tag                                 <hr>
+paragraph tag dont consider spaceses                <P>
+highlite line by breaking                           <blockquote>
+pragragraph tag considering spaceses                <pre>
+boid/italic/underline/cut_text(section)             <b>/<i>/<u>/<s>
+big_text/small_tag                                  <big>/<small>
+abbrivation tag(for giving notes in anyword)        <abbr title="message">
+subscript/superscript                               <sub>/<sup>
+for new section of data                             <div>
+
+for linking in same page                            <a href="#content_name">name</a>
+   first goto the section which will link and write <a name="content_name">.....</a>
+for linking onother page                            <a href "..htmlfilename.html..#content_name">name</a>
+   first goto the other html page which will-
+   -link and write in section which will link       <a name="content_name">.....</a>
+
+for scrolling text or image                         <merquee>
+    direction [up/down/left/right]      for scrolling text direction
+    behavior [slide/alternate/scroll]   for scrolling text in which formate
+    scrollamount    (for speed of scrolling)
+    loop            (if u want to give a fix sliding then give value to loop)
+    bgcolor         (for background color of the slidding)
+
+blink any text using                                <blink>   
+import audio in page                                <audio src="" controls>
+for embanding youtube video in page using           <iframe>
+    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>all tags</title>
+        <!-- <link rel="stylesheet" href="location of file" /> -->
+        <!-- <script src="location of js file">js</script> -->
+    </head>
+
+    <!-- <body> -->
+
+    <body bgcolor="yellow">
+        <!-- <body background="img/6.jpg"> -->
+        <!-- <body link= "green" vlink="yellow" alink="red" background="img/6.jpg"> -->
+
+        <center>
+            <font size="20">pk</font>
+        </center>
+        <center>
+            <audio src="music/kahani suno.mp3" controls>if this message is appear then audio player is not supporting in your browsers</audio>
+        </center>
+        <center>
+            <video src="download/pk.mp4" controls width="200px"></video>
+        </center>
+        <center>
+            <img src="img/7.jpg" width="400">
+        </center>
+
+        <h4>
+            <marquee direction="left" scrollamount="20" loop="default" bgcolor="white" behavior="alternate">
+                My Name Is<font face="default" size="10" color="red"><b>Pradhuman Kumar</b></font>
+            </marquee>
+
+            <marquee bgcolor="white" behavior="alternate" scrollamount="30" onmouseover="this.stop()"
+                onmousedown="this.start()">
+                <img src="img/1.jpg" width="500" hight="500">
+                <img src="img/2.jpg" width="500" hight="500">
+                <img src="img/3.jpg" width="500" hight="500">
+                <img src="img/4.jpg" width="500" hight="500">
+                <img src="img/PHOTO.jpg" width="350" hight="350">
+                <img src="img/5.jpg" width="500" hight="500">
+                <img src="img/6.jpg" width="500" hight="500">
+                <img src="img/7.jpg" width="500" hight="500">
+                <img src="img/8.jpg" width="500" hight="500">
+            </marquee>
+        </h4>
+
+        <h4>
+            <a href="img/PHOTO.jpg" target="_blank" title="click now"><b>for showing pic of pk</b></a>
+            <br>
+            <a href="#content2">link from same page content</a>
+            <br>
+            <a href="list_table.html#intable" target="_blank">link from other page content</a>
+        </h4>
+
+        <hr color="white" width="500" align="default">
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad enim, iste, quos eveniet neque quae
+            accusamus,nulla pariatur
+            consectetur mollitia consequatur recusandae sequi? Inventore cum blanditiis repellat iste, qui
+            possimus?Loremipsum dolor
+            ¶ consectetur adipisicing elit. Ipsa repellendus magni adipisci saepe reprehenderit autem commodi
+            velit.Iure, cumque nemo?
+        <blockquote>veritatis voluptatum quo doloribus debitis natus, architecto ducimus commodi! Expedita non
+            itaquecommodi nobis in</blockquote>
+        molestias sit aut amet, veritatis incidunt ducimus assumenda error qui animi distinctio et alias
+        laboriosamfugiat.Esse sint modi
+        rem, illo voluptatibus quibusdam, blanditiis dolorum, molestiae saepe excepturi recusandae maxime unde optio
+        </p>
+
+        <hr color="white" width="500" align="left">
+
+        <a name="content2">
+            <pre>
+            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,Lorem ipsum dolor sit, amet consectetur</b>
+                <i>adipisicing elit. Quidem repellendus laudantium quam, accusamus porro nam minima tenetur autem alias facilis</i>
+                    <u>culpa reiciendis saepe, atque libero vel maxime animi totam voluptatibus sunt sint iste! Dolore aut aspernatur</u>
+                <s>quibusdam tempore, corrupti amet, quas similique incidunt praesentium delectus temporibus laudantium deleniti</s>
+            <big>architecto omnis, provident beatae minima veritatis libero! Reiciendis, autem accusantium nemo ratione suscipit</big> 
+                <small>usto deserunt natus explicabo eveniet mollitia Consequuntur cupiditatevoluptas sequi dolorem eaque minima culpa </small>
+                    <abbr title="abbrivation is use to give information in any words like full form">repellendus amet maxime hic inventore. </abbr>
+                <div>illum temporibus excepturi laboriosam vel<sub>distinctio unde mollitia fugit impedit molestiae</sub> temporam maiores eius do
+            dolores voluptatem. Lorem ipsum dolor sit amet <sup>consectetur adipisicing elit. Quos et, aut quam ipsa </sup> esse obcaecati minima</div>
+                pariatur qui assumenda earum, aliquam itaque 
+            </pre>
+        </a>
+
+    </body>
+</html>
