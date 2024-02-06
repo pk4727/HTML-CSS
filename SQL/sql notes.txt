@@ -1,0 +1,312 @@
+@ opening process of sql server :-   
+    open xampp app 
+    start appache
+    start mysql
+    open localhost/phpadmin/ in chrome
+    open database
+    goto sql and write code
+
+@ primary key :- it is a column (or set of columns) in a table that uniquely identifies each row.it should be 'NOT NULL'.
+@ foreign key :- it is a column (or set of columns) in a table that refers to the primary key of another table.it have duplicate & 'NULL' values.
+                    eg. table1( id(PK of table1), name, cid(FK of table2), city )    &   table2( id(PK of table2), city )
+
+
+@ CONSTRAINT :-
+
+SHOW DATABASES;                                                 # show all database of current server
+SHOW TABLES;                                                    # show all tables of current database
+        
+"CREATE/DROP DATABASE" database1;                               # creating new database
+"CREATE/DROP DATABASE" if not exists database1;                 # creating new database if not available
+"DROP COLUMN" column_name;                                      # for delete whole table with data
+"TRUNCATE TABLE" table_name;                                    # for delete whole table data but not table structure
+
+"USE" database1;                                                # work in given database
+"CREATE TABLE" SQL1(                                            # create table or defining schemma that how many columns in table and column name / column datatype / max length / primary key of value which is inserted in column.
+Name varchar(100),      
+roll int(50) primary key, or primary key (id)       
+branch varchar(255),         
+collage varchar(255));      
+
+"INSERT INTO" sql1 (name, roll, branch, collage)                   # insert data into table
+values('sayantan laha', 85, 'AIML','NiT');                        # having value this
+"insert into" sql1 values('sayantan laha',85,'AIML','NiT');
+
+"DESC" sql1;                                                    # show schema of table or column name of table
+select * "FROM" sql1;                                           # show all columns with row data of table
+select "col1_name, col2_name" from sql1;                        # show col1, col2 with row data from table.
+select "DISTINCT" col1_name from sql1;                          # show all unique value of col1 from table.                                 [keyword]
+select * from sql1 "WHERE" col1_name = 'giridih;                # show all column with row data from table where city is giridih in row.    [clause]
+select * from sql1 "LIMIT" 3;                                   # return 3 student from table                                               [clause]
+select * from sql1
+    "ORDER BY" city ASC or DESC;                                # show in ascending or descending order from table                          [clause]
+select "MAX(marks)" from sql1;                                  # return maximum marks from marks column in sql1 table                      [aggregate function]
+select "MIN(marks)" from sql1;                                  # return minimum marks from marks column in sql1 table                      [aggregate function]
+select "SUM(marks)" from sql1;                                  # return sum of all marks from marks column in sql1 table                   [aggregate function]
+select "AVG(marks)" from sql1;                                  # return average value of marks from marks column in sql1 table             [aggregate function]
+select "COUNT(marks)" from sql1;                                # return number of marks present in marks column in sql1 table              [aggregate function]
+select city, count(name)                                        # here define condition also we calculate output column ie. city and count
+    from sql1
+    "GROUP BY" city;                                            # it collect data from multiple records and groups the result by one or more columns. generally we use group by with smoe aggregation function. [clause]
+select city, count(name)
+    from sql1
+    group by city
+    "HAVING" max(marks)>90;                                     # its apply condition on groups ,count number of students in each city where max marks cross 90 (work similar to where)                         [clause]
+
+
+@ order for write that type of keywords at a time :- [ select -> from -> where -> group by -> having -> order by ]
+
+create table customer(
+    id int,
+    city varchar(50)
+);
+create table foren(
+    id int,
+    name varchar(100) NOT NULL,                                 # here define that [ column_name = name, column_datatype = variablecharacter, column_charlength = 100, column_canbe = NULL or NOT NULL ]
+    age int CHECK age >= 18,                                    # for checking any condition in any column
+    CONSTRAINT age_check CHECK (age >= 18 and city='giridih')   # or this for check condition
+    cid int,
+    foreign key (cid) references customer(id)                   # here 'cid' column of foren table is work as foreign key of customer table having column is 'id'.
+    city varchar(100) default 'giridih',                        # when 'city' column is null then bydefault value become giridih.
+);
+
+
+@ operators :-                      (operation work a/c to requirement)
+
+    + : addition                                                
+    - : subtraction                                             
+    * : multiplication                                          
+    / : division                                                
+    % : modulus                                                 
+    = : equalto                                                 
+   != : not equalto                                             
+    > : greater than                                            
+   >= : greater than equalto                                    
+    < : less than                                               
+   <= : less than equalto                                       
+    & : bitwise AND                                             
+    | : bitwise OR                                              
+    and                                                         # if both condition success then show that row [where city='delhi'AND marks=80]
+    or                                                          # if any one success then show that row  [where city='delhi'OR marks=80]
+    not                                                         
+    in                                                          # show matches any value in the tupple of rows from table [where city IN ('delhi', '''mumbai''')]
+    not in                                                      # to negate the given condition 'in' [where city NOT IN ('delhi', '''mumbai''')]
+    between - and                                               # show all row which have value in given range [where marks BETWEEN 80 AND 90]
+    between
+    all
+    like
+    any
+
+
+@ Queries :-
+
+SET sql_safe_updates = 0 or 1;                                  # for removing safe mode of sql database
+
+"UPDATE" sql1                                                   # update any data a/c to given condition in table ie. [ col_name = grade, old_value_col='A', new_value_col='O' ] this change all A grade to O.
+SET col_name = new_value_col
+where col_name = old_value_col;
+
+"DELETE" from sql1                                              # delete any data a/c to given condition from table
+where col_name = col_value;
+
+
+@ ALTER :- ( change the schema )
+
+ALTER table table_name
+"ADD COLUMN" column_name datatype constraint;                   # for adding a new column in table
+
+ALTER table table_name
+"DROP COLUMN" column_name;                                      # for delete any column from table 
+
+ALTER table table_name
+"RENAME TO" new_table_name;                                     # for renaming table name to new table name
+
+ALTER table table_name
+"CHANGE COLUMN" old_name new_name new_datatype new_constraint;  # for renaming column name to new column name
+
+ALTER table table_name
+"MODIFY" col_name new_datatype new_constraint;                  # for modifying any datatype or constraint
+
+@ Revisiting foreign key :-
+
+create table fk (
+cid int,
+foreign key (cid) references customer(id)                       # here 'cid' column of foren table is work as foreign key of customer table having column is 'id'.
+ON DELETE CASCADE                                               # when delete happen in parent table then also change reflect in child table
+ON UPDATE CASCADE                                               # when update happen in parent table then also change reflect in child table 
+);
+
+
+@ JOIN :-                                ( it is used to combine rows from two or more tables,based on a related column between them.)
+
+select * from table1
+"INNER JOIN" table2                                             # (intersection of two tables A^B)
+"ON" table1.col_name=table2.col_name;                           # return records that have matching value in both tables where column = given column_name
+
+select * from table1
+"LEFT JOIN" table2                                              # (set A + A^B of two tables)
+"ON" table1.col_name=table2.col_name;                           # return all record of table1 and intersection of both tables where column = given column_name
+
+select * from table1
+"RIGHT JOIN" table2                                             # (set B + A^B of two tables)
+"ON" table1.col_name=table2.col_name;                           # return all record of table2 and intersection of both tables where column = given column_name
+
+select * from table1                                            # (union of two tables AuB) return all unique value of both tables
+"LEFT JOIN" table2                                              
+"ON" table1.col_name=table2.col_name;                           # left join +
+"UNION"                                                         # union +           (union gives unique value from all values)
+select * from table1                                            # right join
+"RIGHT JOIN" table2                                             
+"ON" table1.col_name=table2.col_name;
+
+select * from table1 as t1                                      # (difference of two tables A-B) : left exclusive
+"LEFT JOIN" table2 as t2                                        # return all value of table1 - matching value in both tables
+"ON" t1.col_name=t2.col_name
+WHERE t2.col_name IS NULL;
+
+select * from table1 as t1                                      # (difference of two tables B-A) : right exclusive
+"RIGHT JOIN" table2 as t2                                       # return all value of table2 - matching value in both tables
+"ON" t1.col_name=t2.col_name
+WHERE t2.col_name IS NULL;
+
+select * from table1 as t1                                      # (unoion of both table - intersection of both tables )
+"LEFT JOIN" table2 as t2                                        # return all unique value of both tables - matching value in both tables
+"ON" t1.col_name=t2.col_name
+WHERE t2.col_name IS NULL;                                      # left exclusive +
+UNION                                                           # union +
+select * from table1 as t1                                      # right exclusive
+"RIGHT JOIN" table2 as t2    
+"ON" t1.col_name=t2.col_name
+WHERE t2.col_name IS NULL;
+
+select a.id as s_id, b.roll                                     # return two columns with data (1. s_id and 2. roll) which satisfied given condition ie. a.id=b.roll
+FROM table as a
+JOIN table as b
+ON a.id=b.roll;
+
+
+@ subqueries :-                             ( a subquery or inner Query or nested Query is a Query within another Query. it involves two select statements. )
+
+select * from table                                             # return all name with roll which have roll more than average roll of roll_column from table[column is id,name,roll]
+where col_name_roll > 
+(select "AVG(marks)" from table);
+
+or
+
+select name from table                                          # return all name which have even roll from table[column is id,name,roll]
+where col_name_roll in 
+(select col_name_roll from table where col_name_roll % 2 == 0);
+
+or
+
+select MAX(col_name_roll) 
+from (select * from table where col_name_name = 'pk') as maxr;  # return max roll of name='pk' from table[column is id,name,roll]
+
+
+@ views :-                                   (it works as virtual table from original table and all operation occur which is work in original table)
+
+CREATE VIEW views_name AS                                       # return a sub table with (column = roll and name) from original table[column = id, roll, name, location, age, m.no]
+SELECT col_name_roll, col_name_name FROM table;
+
+TRUNCATE TABLE employee;
+Emp_ID	Name_Prefix	First_Name	Last_Name	Gender	EMail	Salary	Bonus	Senior_Management	Team	Dept_name	location	travel_required
+INSERT INTO employee values (677509, 'Drs.', 'Lois', 'Walker', 'F', 'lois.walker@hotmail.com', 168251, 6.945, 'TRUE', 'Marketing', 'HR', 'Pune', 'yes');
+INSERT INTO employee values (940761, 'Ms.', 'Brenda', 'Robinson', 'F', 'brenda.robinson@gmail.com', 51063, 4.17, 'TRUE','' , 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (428945, 'Dr.', 'Joe', 'Robinson', 'M', 'joe.robinson@gmail.com', 50155, 11.858, 'FALSE', 'Finance', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (408351, 'Drs.', 'Diane', 'Evans', 'F', 'diane.evans@yahoo.com', 180294, 9.34, 'TRUE', 'Finance', 'Finance', 'Pune', 'no');
+INSERT INTO employee values (193819, 'Mr.', 'Benjamin', 'Russell', 'M', 'benjamin.russell@charter.net', 117642, 1.389, 'TRUE', 'Client Services', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (499687, 'Mr.', 'Patrick', 'Bailey', 'M', 'patrick.bailey@aol.com', 72305, 10.125, 'FALSE', 'Legal', 'Tech', 'Pune', 'no');
+INSERT INTO employee values (539712, 'Ms.', 'Nancy', 'Baker', 'F', 'nancy.baker@bp.com', 98189, 10.012, 'TRUE', 'Product', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (380086, 'Mrs.', 'Carol', 'Murphy', 'F', 'carol.murphy@gmail.com', 60918, 11.598,'' , 'Finance', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (477616, 'Hon.', 'Frances', 'Young', 'F', 'frances.young@gmail.com', 121587, 18.523, 'TRUE', 'Engineering', 'HR', 'Pune', 'no');
+INSERT INTO employee values (162402, 'Hon.', 'Diana', 'Peterson', 'F', 'diana.peterson@hotmail.co.uk', 43010, 7.524, 'TRUE', 'Business Development', 'HR', 'Pune', 'no');
+INSERT INTO employee values (231469, 'Mr.', 'Ralph', 'Flores', 'M', 'ralph.flores@yahoo.com', 118457, 15.132, 'TRUE','' , 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (153989, 'Prof.', 'Jack', 'Alexander', 'M', 'jack.alexander@gmail.com', 82965, 12.637, 'TRUE', 'Legal', 'HR', 'Mumbai', 'yes');
+INSERT INTO employee values (386158, 'Mrs.', 'Melissa', 'King', 'F', 'melissa.king@comcast.net', 166892, 17.492, 'TRUE', 'Human Resources', 'Finance', 'Bangalore', 'yes');
+INSERT INTO employee values (301576, 'Hon.', 'Wayne', 'Watson', 'M', 'wayne.watson@gmail.com', 92758, 5.831, 'FALSE', 'Sales', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (441771, 'Mrs.', 'Cheryl', 'Scott', 'F', 'cheryl.scott@gmail.com', 92220, 14.543, 'TRUE', 'Finance', 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (528509, 'Hon.', 'Paula', 'Diaz', 'F', 'paula.diaz@gmail.com', 152654, 1.256, 'FALSE', 'Product', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (912990, 'Mr.', 'Joshua', 'Stewart', 'M', 'joshua.stewart@yahoo.com', 184896, 7.369, 'FALSE', 'Human Resources', 'Tech', 'Bangalore', 'no');
+INSERT INTO employee values (214352, 'Ms.', 'Theresa', 'Lee', 'F', 'theresa.lee@gmail.com', 197537, 6.414, 'FALSE', 'Product', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (890290, 'Hon.', 'Julia', 'Scott', 'F', 'julia.scott@apple.com', 141518, 19.082, 'FALSE', 'Client Services', 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (622406, 'Mr.', 'Thomas', 'Lewis', 'M', 'thomas.lewis@gmail.com', 73862, 1.894, 'FALSE', 'Product', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (979607, 'Ms.', 'Carol', 'Edwards', 'F', 'carol.edwards@msn.com', 93967, 4.934, 'TRUE', 'Legal', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (969580, 'Prof.', 'Matthew', 'Turner', 'M', 'matthew.turner@gmail.com', 52237, 13.645, 'FALSE', 'Marketing', 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (426038, 'Hon.', 'Joan', 'Stewart', 'F', 'joan.stewart@yahoo.com', 111673, 18.816, 'TRUE', 'Client Services', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (388642, 'Mrs.', 'Ruby', 'Rogers', 'F', 'ruby.rogers@gmail.com', 160623, 5.042,'' ,'' , 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (560455, 'Ms.', 'Carolyn', 'Hayes', 'F', 'carolyn.hayes@hotmail.co.uk', 42005, 13.873, 'FALSE', 'Client Services', 'Finance', 'Pune', 'yes');
+INSERT INTO employee values (477253, 'Mrs.', 'Anne', 'Russell', 'F', 'anne.russell@ibm.com', 103160, 18.576,'' , 'Client Services', 'HR', 'Pune', 'no');
+INSERT INTO employee values (263480, 'Hon.', 'Daniel', 'Cooper', 'M', 'daniel.cooper@yahoo.com', 153790, 7.757, 'TRUE', 'Marketing', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (683826, 'Mr.', 'Roger', 'Roberts', 'M', 'roger.roberts@gmail.com', 129625, 5.218, 'FALSE', 'Legal', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (474599, 'Drs.', 'Maria', 'Walker', 'F', 'maria.walker@microsoft.com', 48944, 13.464, 'TRUE', 'Client Services', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (335732, 'Ms.', 'Brenda', 'Butler', 'F', 'brenda.butler@gmail.com', 60508, 7.008, 'TRUE', 'Legal', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (329752, 'Hon.', 'Lillian', 'Brown', 'F', 'lillian.brown@aol.com', 67251, 9.096, 'TRUE', 'Engineering', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (893212, 'Ms.', 'Amy', 'Howard', 'F', 'amy.howard@aol.com', 112715, 12.752, 'FALSE', 'Product', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (621833, 'Mr.', 'Gregory', 'Edwards', 'M', 'gregory.edwards@outlook.com', 169245, 6.417,'' ,'', 'HR', 'Mumbai', 'yes');
+INSERT INTO employee values (456747, 'Mr.', 'Roy', 'Griffin', 'M', 'roy.griffin@yahoo.com', 170895, 16.18, 'FALSE', 'Business Development', 'HR', 'Bangalore', 'yes');
+INSERT INTO employee values (278556, 'Prof.', 'Richard', 'Mitchell', 'M', 'richard.mitchell@verizon.net', 122226, 19.096, 'FALSE', 'Client Services', 'Tech', 'Bangalore', 'no');
+INSERT INTO employee values (333476, 'Hon.', 'Mary', 'Wilson', 'F', 'mary.wilson@sbcglobal.net', 109394, 16.675, 'FALSE', 'Sales', 'HR', 'Pune', 'yes');
+INSERT INTO employee values (218791, 'Mr.', 'Aaron', 'Price', 'M', 'aaron.price@bp.com', 54402, 12.599, 'FALSE', 'Business Development', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (134841, 'Ms.', 'Donna', 'Brown', 'F', 'donna.brown@aol.com', 129836, 9.557, 'TRUE', 'Client Services', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (726264, 'Hon.', 'Carl', 'Collins', 'M', 'carl.collins@yahoo.com', 162159, 5.574, 'TRUE', 'Business Development', 'Finance', 'Pune', 'no');
+INSERT INTO employee values (766610, 'Ms.', 'Joyce', 'Jenkins', 'F', 'joyce.jenkins@aol.com', 119321, 7.797,'' , 'Client Services', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (227922, 'Hon.', 'Amanda', 'Hughes', 'F', 'amanda.hughes@rediffmail.com', 114257, 11.308, 'TRUE', 'Business Development', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (265813, 'Hon.', 'Jack', 'Campbell', 'M', 'jack.campbell@gmail.com', 186280, 15.835, 'FALSE', 'Legal', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (247137, 'Mr.', 'Alan', 'Rivera', 'M', 'alan.rivera@apple.com', 154810, 5.207, 'TRUE', 'Marketing', 'HR', 'Pune', 'no');
+INSERT INTO employee values (407061, 'Ms.', 'Elizabeth', 'Jackson', 'F', 'elizabeth.jackson@aol.com', 85420, 7.482, 'TRUE', 'Product', 'HR', 'Pune', 'no');
+INSERT INTO employee values (226714, 'Drs.', 'Nancy', 'Davis', 'F', 'nancy.davis@ibm.com', 94986, 13.886, 'TRUE', 'Sales', 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (702813, 'Mr.', 'Ernest', 'Martinez', 'M', 'ernest.martinez@gmail.com', 172098, 6.796, 'FALSE', 'Finance', 'HR', 'Mumbai', 'yes');
+INSERT INTO employee values (524896, 'Ms.', 'Judy', 'Hernandez', 'F', 'judy.hernandez@gmail.com', 133332, 9, 'TRUE', 'Client Services', 'Finance', 'Bangalore', 'yes');
+INSERT INTO employee values (363065, 'Drs.', 'Nancy', 'Jones', 'F', 'nancy.jones@gmail.com', 61924, 6.083, 'TRUE', 'Business Development', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (879753, 'Mrs.', 'Pamela', 'Wright', 'F', 'pamela.wright@aol.com', 149262, 3.055, 'FALSE', 'Sales', 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (958326, 'Mr.', 'Larry', 'Miller', 'M', 'larry.miller@shell.com', 97904, 13.83, 'TRUE', 'Engineering', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (447813, 'Mrs.', 'Ann', 'Coleman', 'F', 'ann.coleman@ibm.com', 130014, 14.009,'' , 'Sales', 'Tech', 'Bangalore', 'no');
+INSERT INTO employee values (525955, 'Drs.', 'Judy', 'Gonzales', 'F', 'judy.gonzales@gmail.com', 149575, 1.695, 'TRUE', 'Human Resources', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (818384, 'Mr.', 'Peter', 'Washington', 'M', 'peter.washington@bp.com', 173226, 17.578, 'TRUE', 'Finance', 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (971640, 'Prof.', 'Clarence', 'Ross', 'M', 'clarence.ross@apple.com', 165272, 8.999, 'FALSE', 'Engineering', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (253573, 'Ms.', 'Sharon', 'Lopez', 'F', 'sharon.lopez@gmail.com', 190139, 17.653, 'TRUE', 'Product', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (904898, 'Drs.', 'Ann', 'Cooper', 'F', 'ann.cooper@exxonmobil.com', 182521, 16.084, 'TRUE', 'Finance', 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (515103, 'Ms.', 'Anne', 'Perez', 'F', 'anne.perez@sbcglobal.net', 114426, 15.107, 'TRUE', 'Human Resources', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (491943, 'Mrs.', 'Nancy', 'Howard', 'F', 'nancy.howard@gmail.com', 101553, 1.481, 'TRUE', 'Engineering', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (750173, 'Mr.', 'Antonio', 'Roberts', 'M', 'antonio.roberts@hotmail.com', 181646, 11.279, 'FALSE', 'Engineering', 'Finance', 'Pune', 'yes');
+INSERT INTO employee values (241882, 'Ms.', 'Debra', 'Wood', 'F', 'debra.wood@hotmail.com', 84318, 3.699, 'FALSE', 'Business Development', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (758872, 'Mr.', 'Henry', 'Jenkins', 'M', 'henry.jenkins@hotmail.com', 102384, 19.414,'' , 'Marketing', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (940922, 'Hon.', 'Melissa', 'Butler', 'F', 'melissa.butler@hotmail.com', 167631, 18.04, 'FALSE', 'Human Resources', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (917937, 'Mr.', 'Todd', 'Hall', 'M', 'todd.hall@yahoo.com', 163560, 18.771, 'FALSE', 'Business Development', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (917395, 'Hon.', 'Christopher', 'Nelson', 'M', 'christopher.nelson@aol.com', 190765, 12.428, 'TRUE', 'Distribution', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (183071, 'Drs.', 'Andrea', 'Garcia', 'F', 'andrea.garcia@aol.com', 54179, 2.672, 'TRUE', 'Business Development', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (316110, 'Mr.', 'Jeremy', 'Sanchez', 'M', 'jeremy.sanchez@hotmail.com', 178847, 9.735, 'TRUE', 'Finance', 'HR', 'Mumbai', 'yes');
+INSERT INTO employee values (293459, 'Mr.', 'Steven', 'Phillips', 'M', 'steven.phillips@hotmail.com', 90108, 14.33, 'TRUE', 'Finance', 'HR', 'Bangalore', 'yes');
+INSERT INTO employee values (732017, 'Ms.', 'Cynthia', 'Ramirez', 'F', 'cynthia.ramirez@btinternet.com', 90531, 4.382, 'TRUE', 'Finance', 'Tech', 'Bangalore', 'no');
+INSERT INTO employee values (915638, 'Dr.', 'Jason', 'Anderson', 'M', 'jason.anderson@gmail.com', 76636, 6.617, 'FALSE', 'Client Services', 'HR', 'Pune', 'yes');
+INSERT INTO employee values (478003, 'Hon.', 'Cynthia', 'White', 'F', 'cynthia.white@gmail.com', 186200, 16.194, 'TRUE', 'Sales', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (951225, 'Ms.', 'Margaret', 'Brooks', 'F', 'margaret.brooks@gmail.com', 43867, 3.833, 'FALSE', 'Product', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (883936, 'Mr.', 'Douglas', 'Flores', 'M', 'douglas.flores@gmail.com', 181793, 4.709, 'TRUE', 'Sales', 'Finance', 'Pune', 'no');
+INSERT INTO employee values (528673, 'Hon.', 'Paul', 'Watson', 'M', 'paul.watson@hotmail.com', 145235, 17.029, 'FALSE', 'Marketing', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (765850, 'Mrs.', 'Linda', 'Moore', 'F', 'linda.moore@gmail.com', 113256, 5.118, 'TRUE', 'Human Resources', 'Tech', 'Pune', 'no');
+INSERT INTO employee values (262382, 'Ms.', 'Cheryl', 'Miller', 'F', 'cheryl.miller@ntlworld.com', 64143, 7.353, 'TRUE', 'Distribution', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (870820, 'Ms.', 'Martha', 'Washington', 'F', 'martha.washington@aol.com', 116629, 1.26, 'TRUE', 'Marketing', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (806955, 'Mr.', 'William', 'Hernandez', 'M', 'william.hernandez@rediffmail.com', 73734, 5.965, 'TRUE', 'Sales', 'HR', 'Pune', 'no');
+INSERT INTO employee values (325319, 'Hon.', 'Carolyn', 'Price', 'F', 'carolyn.price@yahoo.com', 48736, 4.99, 'FALSE', 'Product', 'HR', 'Pune', 'no');
+INSERT INTO employee values (623253, 'Mrs.', 'Ruby', 'Stewart', 'F', 'ruby.stewart@gmail.com', 174774, 15.602, 'TRUE', 'Sales', 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (225925, 'Mr.', 'Paul', 'Cooper', 'M', 'paul.cooper@gmail.com', 73526, 14.822, 'FALSE', 'Legal', 'HR', 'Mumbai', 'yes');
+INSERT INTO employee values (761821, 'Mr.', 'Ernest', 'Washington', 'M', 'ernest.washington@msn.com', 176675, 8.379, 'TRUE', 'Client Services', 'Finance', 'Bangalore', 'yes');
+INSERT INTO employee values (400173, 'Ms.', 'Dorothy', 'Edwards', 'F', 'dorothy.edwards@hotmail.co.uk', 179017, 6.539, 'TRUE', 'Finance', 'Tech', 'Bangalore', 'yes');
+INSERT INTO employee values (802554, 'Mr.', 'Ryan', 'Alexander', 'M', 'ryan.alexander@shell.com', 106628, 7.511, 'FALSE', 'Finance', 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (476433, 'Ms.', 'Lillian', 'Mitchell', 'F', 'lillian.mitchell@shaw.com', 149878, 3.887, 'TRUE', 'Client Services', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (533952, 'Ms.', 'Kelly', 'Adams', 'F', 'kelly.adams@bp.com', 51878, 17.29, 'TRUE', 'Business Development', 'Tech', 'Bangalore', 'no');
+INSERT INTO employee values (623929, 'Prof.', 'Jimmy', 'Howard', 'M', 'jimmy.howard@yahoo.com', 120631, 8.276, 'TRUE', 'Sales', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (844177, 'Ms.', 'Margaret', 'Allen', 'F', 'margaret.allen@gmail.com', 180107, 6.155, 'TRUE', 'Legal', 'HR', 'Mumbai', 'no');
+INSERT INTO employee values (212893, 'Ms.', 'Janet', 'Henderson', 'F', 'janet.henderson@ntlworld.com', 114481, 11.955, 'FALSE', 'Legal', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (185032, 'Mr.', 'Eugene', 'Perez', 'M', 'eugene.perez@exxonmobil.com', 122950, 11.583, 'TRUE', 'Legal', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (867084, 'Ms.', 'Deborah', 'Smith', 'F', 'deborah.smith@yahoo.com', 52767, 8.309, 'FALSE','' , 'Tech', 'Mumbai', 'yes');
+INSERT INTO employee values (969964, 'Hon.', 'Janice', 'Parker', 'F', 'janice.parker@yahoo.com', 147641, 12.506, 'TRUE', 'Business Development', 'Tech', 'Mumbai', 'no');
+INSERT INTO employee values (158666, 'Ms.', 'Rebecca', 'Stewart', 'F', 'rebecca.stewart@gmail.com', 160043, 1.601, 'TRUE', 'Legal', 'Tech', 'Pune', 'yes');
+INSERT INTO employee values (489424, 'Dr.', 'Phillip', 'White', 'M', 'phillip.white@gmail.com', 181774, 7.03, 'FALSE', 'Legal', 'Finance', 'Pune', 'yes');
+INSERT INTO employee values (639892, 'Mr.', 'Jose', 'Hill', 'M', 'jose.hill@hotmail.com', 129774, 14.166, 'FALSE', 'Client Services', 'HR', 'Pune', 'no');
+INSERT INTO employee values (704709, 'Dr.', 'Harold', 'Nelson', 'M', 'harold.nelson@gmail.com', 156194, 1.737, 'FALSE', 'Finance', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (461593, 'Ms.', 'Nicole', 'Ward', 'F', 'nicole.ward@yahoo.com', 95673, 10.62, 'TRUE', 'Marketing', 'HR', 'Bangalore', 'no');
+INSERT INTO employee values (392491, 'Mrs.', 'Theresa', 'Murphy', 'F', 'theresa.murphy@gmail.com', 51015, 16.961, 'TRUE', 'Marketing', 'Finance', 'Bangalore', 'no');
+INSERT INTO employee values (495141, 'Drs.', 'Tammy', 'Young', 'F', 'tammy.young@comcast.net', 93650, 12.447, 'FALSE', 'Business Development', 'Finance', 'Mumbai', 'no');
+INSERT INTO employee values (923947, 'Ms.', 'Mary', 'Bryant', 'F', 'mary.bryant@verizon.net', 155442, 2.665, 'TRUE', 'Distribution', 'Tech', 'Pune', 'no');
+INSERT INTO employee values (687017, 'Ms.', 'Frances', 'Watson', 'F', 'frances.watson@outlook.com', 46945, 4.271, 'FALSE', 'Distribution', 'HR', 'Pune', 'no');
