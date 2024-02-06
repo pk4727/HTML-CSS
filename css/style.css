@@ -1,0 +1,22 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference    --> css all keys referances */
+
+#first{
+    background: red;
+    color: black;
+    width: 40%;
+}
+.red{
+    background-color: green;
+    width: 50%;
+}
+.red.bg-blue{
+    background-color: blue;
+    color: white;
+    width: 60%;
+}
+
+
+
+
+/* grid column  */
+/* p6-3,4,5 */

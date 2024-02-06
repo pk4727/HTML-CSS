@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>font and display</title>
+        <style>
+            .a {
+                width: 50%;
+                height: 100px;
+                padding-top: 10px;
+                background: yellow;
+                color: red;
+
+                /* display: inline; */
+                /* display: block; */
+                display: inline-block;
+                /* display: none; */
+
+                /* text-align: start; */
+                text-align: end;
+                /* text-align: left; */
+                /* text-align: right; */
+                /* text-align: center; */
+                /* text-align: justify; */
+                /* text-align: justify-all; */
+                /* text-align: match-parent; */
+            }
+
+            .b {
+                display: inline-block;
+                width: 50%;
+                height: 100px;
+                background: rgb(243, 216, 216);
+                color: red;
+            }
+
+            .c {
+                background: red;
+                columns: white;
+                width: 50%;
+                height: 300px;
+                padding: 10px;
+
+                text-decoration-color: gold;
+                text-decoration-thickness: 0.2px;
+
+                /* text-decoration-line: none; */
+                /* text-decoration-line: underline; */
+                text-decoration-line: overline;
+                /* text-decoration-line: line-through; */
+                /* text-decoration-line: blink; */
+                /* text-decoration-line: underline overline; */
+                /* text-decoration-line: overline underline line-through; */
+
+                /* text-decoration-style: solid; */
+                /* text-decoration-style: double; */
+                text-decoration-style: dotted;
+                /* text-decoration-style: dashed; */
+                /* text-decoration-style: wavy; */
+
+                /* text-transform: none; */
+                text-transform: capitalize;
+                /* text-transform: uppercase; */
+                /* text-transform: lowercase; */
+
+                /* line-height: 20px; */
+                font-size: 21px;
+
+                font-family: "Gill Sans Extrabold", sans-serif;
+                font-family: "Goudy Bookletter 1911", sans-serif;
+                font-family: serif;
+                font-family: sans-serif;
+                font-family: monospace;
+                font-family: cursive;
+                font-family: fantasy;
+                font-family: system-ui;
+                font-family: ui-serif;
+                font-family: ui-sans-serif;
+                font-family: ui-monospace;
+                font-family: ui-rounded;
+                font-family: emoji;
+                font-family: math;
+                font-family: fangsong;
+               
+                font-stretch: ultra-condensed;
+                font-stretch: extra-condensed;
+                font-stretch: condensed;
+                font-stretch: semi-condensed;
+                font-stretch: normal;
+                font-stretch: semi-expanded;
+                font-stretch: expanded;
+                font-stretch: extra-expanded;
+                font-stretch: ultra-expanded;
+
+                font-style: normal;
+                font-style: italic;
+                font-style: oblique;
+                font-style: oblique 10deg;
+
+                font-weight: normal;
+                font-weight: bold;
+                font-weight: lighter;
+                font-weight: bolder;
+                
+                font-variant-alternates: normal;
+                font-variant-alternates: historical-forms;
+                /* Functional notation values */
+                font-variant-alternates: stylistic(user-defined-ident);
+                font-variant-alternates: styleset(user-defined-ident);
+                font-variant-alternates: character-variant(user-defined-ident);
+                font-variant-alternates: swash(user-defined-ident);
+                font-variant-alternates: ornaments(user-defined-ident);
+                font-variant-alternates: annotation(user-defined-ident);
+                font-variant-alternates: swash(ident1) annotation(ident2);
+
+                font-variant-caps: normal;
+                font-variant-caps: small-caps;
+                font-variant-caps: all-small-caps;
+                font-variant-caps: petite-caps;
+                font-variant-caps: all-petite-caps;
+                font-variant-caps: unicase;
+                font-variant-caps: titling-caps;
+                
+                font-variant-east-asian: normal;
+                font-variant-east-asian: ruby;
+                font-variant-east-asian: jis78; /* <east-asian-variant-values> */
+                font-variant-east-asian: jis83; /* <east-asian-variant-values> */
+                font-variant-east-asian: jis90; /* <east-asian-variant-values> */
+                font-variant-east-asian: jis04; /* <east-asian-variant-values> */
+                font-variant-east-asian: simplified; /* <east-asian-variant-values> */
+                font-variant-east-asian: traditional; /* <east-asian-variant-values> */
+                font-variant-east-asian: full-width; /* <east-asian-width-values> */
+                font-variant-east-asian: proportional-width; /* <east-asian-width-values> */
+                font-variant-east-asian: ruby full-width jis83;
+                /* Keyword values */
+                font-variant-ligatures: normal;
+                font-variant-ligatures: none;
+                font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+                font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+                font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
+                font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
+                font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+                font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+                font-variant-ligatures: contextual; /* <contextual-alt-values> */
+                font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
+                
+                font-variant-numeric: normal;
+                font-variant-numeric: ordinal;
+                font-variant-numeric: slashed-zero;
+                font-variant-numeric: lining-nums; /* <numeric-figure-values> */
+                font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
+                font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
+                font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
+                font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
+                font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
+                font-variant-numeric: oldstyle-nums stacked-fractions;
+                /* Keyword values */
+                font-variant-position: normal;
+                font-variant-position: sub;
+                font-variant-position: super; 
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="a">Lorem Maiores placeat sit unde porro suscipit
+            et doloremque ad nemo quasi consequatur aliquam omnis
+            facere!</div>
+        <div class="b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto veniam similique ut fugit. Sint
+            deserunt quod dolore provident eos? Ipsam porro quibusdam minima obcaecati ratione non mollitia adipisci
+            modi ullam iusto? Dolorem, illum?</div><br>
+        <div class="c">myself pk from giridih. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis
+            quis beatae cumque nihil quam rem exercitationem debitis perferendis sequi? Exercitationem voluptas
+            aspernatur aliquid ad, beatae provident nihil, obcaecati labore ipsa rerum laborum ipsam, unde accusantium
+            eaque? Rem quos consequuntur blanditiis itaque exercitationem impedit eos earum voluptatum. Atque, ea eum.
+        </div>
+    </body>
+
+</html>

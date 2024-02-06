@@ -1,0 +1,1149 @@
+<!--
+    > command <                                         > difference shown <                        > example <
+
+    #--name--                                               div[id=" "]                           #first = <div id="first"> </div>
+    .--name--                                               div[class=" "]                          .red = <div class="red"> </div> 
+    section.--name--                                        section[class=" "]               section.red = <section class="red">deepak kumar</section>
+    setion.--name--.--name--                                section[class=" "]       section.red.bg-blue = <section class="red bg-blue"></section>
+    
+
+
+@ for css style three rule are available :-
+    1. <style> ---------- </style>                         -> style  tag   [adding <style> -- </style> to html before head tag]
+    2. <div id=" --name-- " style=" --tags-- ">            -> inline css   [adding css using attribute]
+    3. <link rel="stylesheet" herf="-.css file name">      -> external css [adding a stylesheet(.css) to html using <link> tag]
+
+@ some rules of css style are :-
+    #--name--                       for id
+    .--name--                       for class
+    /*  --- */                      comment
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css rule</title>
+        <!-- <link rel="stylesheet" href="style.css">           for css-->
+
+        <style>
+            /* for appling in all page  */
+            * {
+                margin: 10;
+                padding: 0;
+            }
+
+            /* id selector */
+            #first {
+                background: red;
+                color: black;
+                width: 40%;
+            }
+
+            /* class selecter */
+            .red {
+                background-color: green;
+                /* bg:red */
+                width: 50%;
+                border: 2px solid black;
+            }
+
+            /* class with multiple selector  */
+            .red.bg-blue,
+            h2 {
+                background-color: blue;
+                color: white;
+                width: 60%;
+            }
+
+            /* selectors are h1,div,body,paragraph,span,UL,NAV,MAIN,select,etc */
+            h1 {
+                color: red;
+            }
+
+            div {
+                background: yellow;
+            }
+
+            .green {
+                background: green;
+                color: aqua;
+            }
+
+            /* 2 */
+            .container {
+                width: 99%;
+                /* height: 334px; */
+                border: 3px solid red;
+                background: rgb(94, 26, 184);
+                color: black;
+                background-image: url("1.jpg");
+
+                background-repeat: repeat-x;                                        /* image repeated in x axis */
+                background-repeat: repeat-y;                                        /* image repeated in y axis */
+                background-repeat: no-repeat;                                       /* image not repeated  */
+                background-repeat: space;                                           /* image not cut but give space between two image if required */
+                background-repeat: round;                                           /* image not cur and round    */
+                background-size: contain;                                           /* save image in such a way that image is shown perfectily */
+                background-size: cover;                                             /* it set image in such a way that full box is filled */
+                background-size: auto;                                              /* in this box fill a/q to image size */
+                background-size: 423px ;                                            /* here width is fixed */
+                background-size: 150px 150px;                                       /* here width and height are fixed */
+
+                background-position: top center;                                    /* in which place image is placed in box    */
+                background-position: bottom center; 
+                background-position: center;
+                background-position: 25% 75% ;
+                background-position: bottom 50px right 70px;
+                background-position: right 35px bottom 75px;
+                background-position: top right;
+                background-position: bottom;
+
+                background-attachment: scroll;                                   /* croll means image and text scroll at a time but inside slidebar scroll only text */
+                background-attachment: fixed;                                    /* fixed means image is fixed but text is scrolled   */
+                background-attachment: local;                                    /* local means image and text scroll at a time but inside slidebar also scroll image and text at a time */
+            }
+
+            body {
+                background-image: url("2.jpg");
+                background-size: 1000px, 1000px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .blue {
+                width: 400px;
+                height: 800px;
+                border: 2px solid red;
+                background: red url('3.jpg') no-repeat local center right;            /* color image repeat attachment position; use this in place of all background key value pair by space separated.*/
+                background-size: 223px 223px;
+            }
+
+            /* 3 */
+            .redd {
+                margin: 5px 10px 8px 15px;                                              /* margin is the gap between enviroment and border [top right bottom left] */
+                /* margin-top: 5px ; */
+                /* margin-right: 10px; */
+                /* margin-bottom: 8px; */
+                /* margin-left: 15px; */
+
+                padding: 3px 5px 8px 15px;                                              /* padding is the gap between text and border [top right bottom left] */
+                /* padding-top: 3px; */
+                /* padding-right: 5px; */
+                /* padding-bottom: 8px; */
+                /* padding-left: 15px; */
+
+                border: 5px dotted black;                                             /* gap between margin and padding  [width style color]
+                border-radius: 3px;                                                     /* bos corner radious control by this */
+
+                border-width: 4px;                                                      /* width of the border */
+                border-top-width:5px ;
+                border-right-width: 6px;
+                border-bottom-width: 7px;
+                border-left-width: 8px;
+
+                border-style: none;
+                border-style: dotted;
+                border-style: inset;
+                border-style: dashed solid;
+                border-style: dashed double none;
+                border-style: dashed groove none dotted;                                /* border style deside that which type of border style print in web [top right bottom left] */
+                border-bottom-style: dashed;
+                border-left-style:groove;
+                border-right-style:none;
+                border-top-style:dotted;
+
+                border-color: black;                                                 /* border color is used in any box border different way are as follows */
+                border-top-color: yellow;
+                border-right-color: green;
+                border-bottom-color: blue;
+                border-left-color: black;
+
+                height: 265px;
+                width: 95%;
+                background: red;
+
+            }
+
+            .box {
+                width: 100%;
+                height: 10%;
+                border: 4px solid green;
+                background: #000;
+                color: white;
+
+                box-sizing: content-box;                                                /* box sizing deside that the internal box of a box is arrenge in which way  */
+                box-sizing: border-box;
+            }
+
+            /* margin of box1 and box2 are collaps so max margin is considered */
+            .box1 {
+                background: yellow;
+                padding: 10px;
+                margin: 30px;
+                height: 70px;
+            }
+
+            .box2 {
+                background: blueviolet;
+                margin: 35px;
+                padding: 20px;
+            }
+
+            /* 4 */
+
+            .a {
+                width: 50%;
+                height: 100px;
+                padding-top: 10px;
+                background: yellow;
+                color: red;
+
+                display: inline;                                                        /* take required width space but not allow to go beside and come beside itself */
+                display: block;                                                         /* take full width space */
+                display: inline-block;                                                  /* take required width space but allow to go beside and come beside itself */
+                display: none;
+
+                text-align: start;                                                      /* place of text in present box [0,0] */
+                text-align: end;                                                        /* [-1,-1] */
+                text-align: left;
+                text-align: right;
+                text-align: center;
+                text-align: justify;                                                    /* dont cut any word if require then space between word is incremented by little */
+            }
+
+            .b {
+                display: inline-block;
+                width: 50%;
+                height: 100px;
+                background: rgb(243, 216, 216);
+                color: red;
+            }
+
+            .c {
+                background: red;
+                columns: white;
+                width: 50%;
+                height: 300px;
+                padding: 10px;
+
+                text-decoration-color: gold;                                         /*  decorate text in given color , thickness , shape ,fontstyle and shape */
+                text-decoration-thickness: 0.2px;
+
+                text-decoration-line: none;
+                text-decoration-line: underline;
+                text-decoration-line: overline;
+                text-decoration-line: line-through;
+                text-decoration-line: blink;
+                text-decoration-line: underline overline;
+                text-decoration-line: overline underline line-through;
+
+                text-decoration-style: solid;
+                text-decoration-style: double;
+                text-decoration-style: dotted;
+                text-decoration-style: dashed;
+                text-decoration-style: wavy;
+
+                text-transform: none;
+                text-transform: capitalize;
+                text-transform: uppercase;
+                text-transform: lowercase;
+
+                line-height: 20px;                                                  /* height of any line irrespective to text ,size , some font-type and style */
+                font-size: 21px;
+
+                font-family: "Gill Sans Extrabold", sans-serif;
+                font-family: "Goudy Bookletter 1911", sans-serif;
+                font-family: serif;
+                font-family: sans-serif;
+                font-family: monospace;
+                font-family: cursive;
+                font-family: fantasy;
+                font-family: system-ui;
+                font-family: ui-serif;
+                font-family: ui-sans-serif;
+                font-family: ui-monospace;
+                font-family: ui-rounded;
+                font-family: emoji;
+                font-family: math;
+                font-family: fangsong;
+
+                font-stretch: ultra-condensed;
+                font-stretch: extra-condensed;
+                font-stretch: condensed;
+                font-stretch: semi-condensed;
+                font-stretch: normal;
+                font-stretch: semi-expanded;
+                font-stretch: expanded;
+                font-stretch: extra-expanded;
+                font-stretch: ultra-expanded;
+
+                font-style: normal;
+                font-style: italic;
+                font-style: oblique;
+                font-style: oblique 10deg;
+
+                font-weight: normal;
+                font-weight: bold;
+                font-weight: lighter;
+                font-weight: bolder;
+
+                font-variant-alternates: normal;
+                font-variant-alternates: historical-forms;
+                /* Functional notation values */
+                font-variant-alternates: stylistic(user-defined-ident);
+                font-variant-alternates: styleset(user-defined-ident);
+                font-variant-alternates: character-variant(user-defined-ident);
+                font-variant-alternates: swash(user-defined-ident);
+                font-variant-alternates: ornaments(user-defined-ident);
+                font-variant-alternates: annotation(user-defined-ident);
+                font-variant-alternates: swash(ident1) annotation(ident2);
+
+                font-variant-caps: normal;
+                font-variant-caps: small-caps;
+                font-variant-caps: all-small-caps;
+                font-variant-caps: petite-caps;
+                font-variant-caps: all-petite-caps;
+                font-variant-caps: unicase;
+                font-variant-caps: titling-caps;
+
+                font-variant-east-asian: normal;
+                font-variant-east-asian: ruby;
+                font-variant-east-asian: jis78;                                                 /* <east-asian-variant-values> */
+                font-variant-east-asian: jis83;                                                 /* <east-asian-variant-values> */
+                font-variant-east-asian: jis90;                                                 /* <east-asian-variant-values> */
+                font-variant-east-asian: jis04;                                                 /* <east-asian-variant-values> */
+                font-variant-east-asian: simplified;                                            /* <east-asian-variant-values> */
+                font-variant-east-asian: traditional;                                           /* <east-asian-variant-values> */
+                font-variant-east-asian: full-width;                                            /* <east-asian-width-values> */
+                font-variant-east-asian: proportional-width;                                    /* <east-asian-width-values> */
+                font-variant-east-asian: ruby full-width jis83;                                 /* Keyword values */
+                font-variant-ligatures: normal;
+                font-variant-ligatures: none;
+                font-variant-ligatures: common-ligatures;                                       /* <common-lig-values> */
+                font-variant-ligatures: no-common-ligatures;                                    /* <common-lig-values> */
+                font-variant-ligatures: discretionary-ligatures;                                /* <discretionary-lig-values> */
+                font-variant-ligatures: no-discretionary-ligatures;                             /* <discretionary-lig-values> */
+                font-variant-ligatures: historical-ligatures;                                   /* <historical-lig-values> */
+                font-variant-ligatures: no-historical-ligatures;                                /* <historical-lig-values> */
+                font-variant-ligatures: contextual;                                             /* <contextual-alt-values> */
+                font-variant-ligatures: no-contextual;                                          /* <contextual-alt-values> */
+
+                font-variant-numeric: normal;
+                font-variant-numeric: ordinal;
+                font-variant-numeric: slashed-zero;
+                font-variant-numeric: lining-nums;                                              /* <numeric-figure-values> */
+                font-variant-numeric: oldstyle-nums;                                            /* <numeric-figure-values> */
+                font-variant-numeric: proportional-nums;                                        /* <numeric-spacing-values> */
+                font-variant-numeric: tabular-nums;                                             /* <numeric-spacing-values> */
+                font-variant-numeric: diagonal-fractions;                                       /* <numeric-fraction-values> */
+                font-variant-numeric: stacked-fractions;                                        /* <numeric-fraction-values> */
+                font-variant-numeric: oldstyle-nums stacked-fractions;                          /* Keyword values */
+                font-variant-position: normal;
+                font-variant-position: sub;
+                font-variant-position: super;
+            }
+
+            /* 5 */
+            .d {
+                font-size: 20px;
+                background: yellow;
+                color: black;
+                height: 1000px;
+            }
+
+            .e {
+                width: 80vw;
+                height: 50vh;
+                font-size: 2em;
+                background: red;
+                color: black;
+            }
+
+            .f {
+                width: 50vh;
+                height: 50vw;
+                font-size: 2rem;
+                background: green;
+            }
+
+            .g {
+                width: 50%;
+                height: auto;
+                background: blue;
+            }
+
+            .h {
+                background: goldenrod;
+                min-width: 10vw;
+                max-width: 70vw;
+                min-height: 10vh;
+                max-height: 90vh;
+
+                /* width: 5vw;                                                      not work because less than given min */
+                width: 60vw;            
+                /* width: 70vw;                                                     not work because more than given max  */
+                /* height: 5vh;                                                     not work not work because less than given min */
+                height: 80vh;           
+                /* height: 95vh;                                                    not work because more than given max */
+            }
+
+            header {
+                background: black;
+                color: white;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
+
+            li {
+                list-style: square inside;
+                /* url("#");                [shape from_bullet_place_which_side for_image] */
+                display: inline;
+            }
+
+            .j {
+                background: greenyellow;
+                width: 50%;
+                height: 200px;
+                margin: auto;                                                       /* means box set in center position */
+                border: 2px solid red;
+            }
+
+            .k {
+                background: blue;
+                width: 100px;
+                height: 100px;
+                z-index: 10;                                                        /* used when we want any page in upper layer of page always */
+
+                position: static;                                                   /* default */
+                top: 5px;                                                           /* not work */
+                left: 10px;
+                right: 8px;
+                bottom: 2px;                                                        /* position: relative; */
+                top: 15px;                                                          /* working a/q html page */
+                left: 10px;                 
+                right: 8px;                 
+                bottom: 2px;                                                        /* position: fixed; */
+                top: 5px;                                                           /* working a/q place but fixed */
+                left: 10px;                 
+                right: 8px;                 
+                bottom: 2px;                                                        /* position: absolute; */
+                top: 5px;
+                left: 10px;                                                         /* work a/q to page */
+                right: 8px;
+                bottom: 2px;
+                
+                position: sticky;                                                   /*  placed at one place and remaining are moving*/
+                top: 5px;
+                left: 10px;
+                right: 8px;
+                bottom: 2px;
+            }
+
+            /* 6 */
+            .box3 {
+                background: red;
+                width: 150px;
+                height: 150px;
+                float: right;
+            }
+
+            .box4 {
+                background: green;
+                width: 150px;
+                height: 150px;
+                float: right;                                                       /*  allow anyone to stay in given direction rule fcfs in code */
+                clear: right;                                                       /*  not allow anyone to stay in given side */
+            }
+
+            .box5 {
+                background: blue;
+                width: 150px;
+                height: 150px;
+            }
+
+            .container2 {
+                display: flex;
+                width: 99%;
+                height: 90vh;
+                background: yellowgreen;
+
+                flex-direction: row;                                                /* in which dirction the box is arrenged */
+                flex-direction: column;
+                flex-direction: column-reverse;
+                flex-direction: row-reverse;
+
+                flex-wrap: wrap;                                                    /* in which type the box is arrenged whwn page is small */
+                flex-wrap: wrap-reverse;
+                flex-wrap: nowrap;
+
+                justify-content: center;                                            /* Pack items around the center */
+                justify-content: start;                                             /* Pack items from the start */
+                justify-content: end;                                               /* Pack items from the end */
+                justify-content: flex-start;                                        /* Pack flex items from the start */
+                justify-content: flex-end;                                          /* Pack flex items from the end */
+                justify-content: left;                                              /* Pack items from the left */
+                justify-content: right;                                             /* Pack items from the right */
+                justify-content: normal;                                            /* Normal alignment */
+                justify-content: space-between;                                     /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+                justify-content: space-around;                                      /* Distribute items evenly Start and end gaps are half the size of the space between each item */
+                justify-content: space-evenly;                                      /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+                justify-content: stretch;                                           /* Distribute items evenly Stretch 'auto'-sized items to fit the container */
+                justify-content: safe center;                                       /* Overflow alignment */
+                justify-content: unsafe center;
+                justify-content: inherit;                                           /* Global values */
+                justify-content: initial;
+                justify-content: revert;
+                justify-content: revert-layer;
+                justify-content: unset;
+
+                align-items: center;                                                /* Pack items around the center align box in whole page */
+                align-items: start;                                                 /* Pack items from the start */
+                align-items: end;                                                   /* Pack items from the end */
+                align-items: flex-start;                                            /* Pack flex items from the start */
+                align-items: flex-end;                                              /* Pack flex items from the end */
+                align-items: self-start;                                            /* Pack flex items from the start */
+                align-items: self-end;                                              /* Pack flex items from the end */
+                align-items: baseline;                                              /* Baseline alignment */
+                align-items: first baseline;
+                align-items: last baseline;                                         /* Overflow alignment (for positional alignment only) */
+                align-items: safe center;
+                align-items: unsafe center;
+
+                align-content: center;                                              /* Pack items around the center align content of box inside box */
+                align-content: start;                                               /* Pack items from the start */
+                align-content: end;                                                 /* Pack items from the end */
+                align-content: flex-start;                                          /* Pack flex items from the start */
+                align-content: flex-end;                                            /* Pack flex items from the end */
+                align-content: normal;                                              /* Normal alignment */
+                align-content: baseline;                                            /* Baseline alignment */
+                align-content: first baseline;
+                align-content: last baseline;
+                align-content: space-between;                                       /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+                align-content: space-around;                                        /* Distribute items evenly Items have a half-size space on either end */
+                align-content: space-evenly;                                        /* Distribute items evenly Items have equal space around them */
+                align-content: stretch;                                             /* Distribute items evenly Stretch 'auto'-sized items to fit the container */
+                align-content: safe center;                                         /* Overflow alignment */
+                align-content: unsafe center;
+
+                align-self: auto;
+                align-self: normal;
+                align-self: center;                                                 /* Put the item around the center */
+                align-self: start;                                                  /* Put the item at the start */
+                align-self: end;                                                    /* Put the item at the end */
+                align-self: self-start;                                             /* Align the item flush at the start */
+                align-self: self-end;                                               /* Align the item flush at the end */
+                align-self: flex-start;                                             /* Put the flex item at the start */
+                align-self: flex-end;                                               /* Put the flex item at the end */
+                align-self: baseline;                                               /* Baseline alignment */
+                align-self: first baseline;
+                align-self: last baseline;
+                align-self: stretch;                                                /* Stretch 'auto'-sized items to fit the container */
+                align-self: safe center;                                            /* Overflow alignment */
+                align-self: unsafe center;
+
+                order: unset;                                                       /*1,2... set in a specific order by ascending */
+                flex-grow: unset;                                                   /*  change shape a/q to given value 1,2... */
+                flex-shrink: unset;                                                 /* reduce content of box a/q to space */
+
+            }
+
+            .box6 {
+                background: black;
+                color: white;
+                width: 150px;
+                height: 150px;
+                border: 2px solid red;
+            }
+
+            .box7 {
+                background: burlywood;
+                width: 150px;
+                height: 150px;
+                border: 2px solid red;
+            }
+
+            .box8 {
+                background: brown;
+                width: 150px;
+                height: 150px;
+                border: 2px solid red;
+            }
+
+            /* 7 */
+            .contain {
+                background: yellow;
+                height: 50vh;
+
+                display: grid;
+                grid-row-gap: 5px;
+                grid-column-gap: 9px;
+                grid-gap: 9px 5px;                                                  /* space between two row and column */
+
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: 45px 35px;
+
+                justify-content: center;                                            /* Pack items around the center */
+                justify-content: start;                                             /* Pack items from the start */
+                justify-content: end;                                               /* Pack items from the end */
+                justify-content: flex-start;                                        /* Pack flex items from the start */
+                justify-content: flex-end;                                          /* Pack flex items from the end */
+                justify-content: left;                                              /* Pack items from the left */
+                justify-content: right;                                             /* Pack items from the right */
+                justify-content: normal; 
+                justify-content: space-between;                                     /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+                justify-content: space-around;                                      /* Distribute items evenly Start and end gaps are half the size of the space between each item */
+                justify-content: space-evenly;                                      /* Distribute items evenly Start, in-between, and end gaps have equal sizes */
+                justify-content: stretch;                                           /* Distribute items evenly Stretch 'auto'-sized items to fit the container */
+                justify-content: safe center; 
+                justify-content: unsafe center; 
+        }
+
+        .item {
+            background: green;
+            border: 2px solid black;
+            grid-column: 1/3;                                                     /*  it span column of given value like 1/3 mins from 1 to 3 three column */
+            grid-row: 1/2;                                                        /* it span row of given value like 1/3 mins from 1 to 3 three row */
+            }
+
+            .item14 {
+                background: red;
+                height: 30vh;
+
+            }
+
+            @media screen and (max-width:700px) {
+
+                                                                                        /* it work a/q to given conditin if condition sucess then the style written inside media screen is start working it shown in vaiable screen */
+                .item14 {
+                    background: burlywood;
+                }
+
+                .contain {
+                    background: blue;
+                }
+            }
+
+            /* 8 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column-gap: 10px;
+                background: rebeccapurple;
+                height: 80vh;
+                padding: 10px;
+            }
+
+            .box {
+                border: 2px solid red;
+                width: 30vw;
+                height: 30vh;
+
+                transform: none;                                                        /* it is a type of changing in content axis by some degree or fixed style  */
+                transform: matrix(1, 2, 3, 4, 5, 6);
+                transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                transform: perspective(17px);
+                transform: rotate(0.5turn);
+                transform: rotate3d(1, 2, 3, 10deg);
+                transform: rotateX(10deg);
+                transform: rotateY(10deg);
+                transform: rotateZ(10deg);
+                transform: translate(12px, 50%);
+                transform: translate3d(12px, 50%, 3em);
+                transform: translateX(2em);
+                transform: translateY(3in);
+                transform: translateZ(2px);
+                transform: scale(2, 0.5);
+                transform: scale3d(2.5, 1.2, 0.3);
+                transform: scaleX(2);
+                transform: scaleY(0.5);
+                transform: scaleZ(0.3);
+                transform: skew(30deg, 20deg);
+                transform: skewX(30deg);
+                transform: skewY(1.07rad);
+                transform: translateX(10px) rotate(10deg) translateY(5px);
+                transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+            }
+
+            img:hover {
+                width: 70vw;
+                height: 70vw;
+            }
+
+            img {
+                width: 70vw;
+                height: 70vw;
+
+                transition-property: none;
+                transition-property: width;
+                transition-property: all;
+                transition-property: test_05;
+                transition-property: -specific;
+                transition-property: sliding-vertically;
+                transition-property: test1, animation4;
+                transition-property: all, height, color;
+                transition-property:all,-moz-specific,sliding;
+
+                transition-delay: 3s;
+                transition-delay: 2s, 4ms;
+                                            
+                transition-duration: 1s;
+                transition-duration: 120ms;
+                transition-duration: 1s, 15s;
+                transition-duration: 10s, 30s, 230ms;
+                                           
+                transition-timing-function: ease;
+                transition-timing-function: ease-in;
+                transition-timing-function: ease-out;
+                transition-timing-function: ease-in-out;
+                transition-timing-function: linear;
+                transition-timing-function: step-start;
+                transition-timing-function: step-end;
+                transition-timing-function: steps(4, jump-end);
+                transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+                transition-timing-function: steps(4, jump-start);
+                transition-timing-function: steps(10, jump-end);
+                transition-timing-function: steps(20, jump-none);
+                transition-timing-function: steps(5, jump-both);
+                transition-timing-function: steps(6, start);
+                transition-timing-function: steps(8, end);
+                transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+                transition: width 3s 1s ease-in-out;                                        /* single command in one line with all condition [applyin time_delay time_duration timing_function] */
+                transition: width 1s ease-in-out, height 4s ease-in;                        /* multi command in one line */
+            }
+
+            #myImage {
+                width: 30vw;
+                height: 30vh;
+                animation: animateimage 3s ease-in-out 3 alternate;                         /* appling animation function in this box with all condition */
+            }
+
+            .container {
+                height: 100vh;
+                width: 100vw;
+                background: yellow;
+            }
+
+            .boxx {
+                background: black;
+                color: white;
+                width: 300px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                animation-name: increasewidth;                                              /* name of animation for calling, time span of animating is duration , delay is time dureation which is not responsive when click for action , and iteration is no of time animation occur */
+                animation-duration: 3s;
+                animation-delay: 1s;
+                animation-iteration-count: 3;
+
+                animation-timing-function: ease;                                            /* this is type of style in which animation show like first slow then fast then again slow  */
+                animation-timing-function: ease-in;
+                animation-timing-function: ease-out;
+                animation-timing-function: ease-in-out;
+                animation-timing-function: linear;
+                animation-timing-function: step-start;
+                animation-timing-function: step-end;
+                animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+                animation-timing-function: steps(4, end);
+                animation-timing-function: steps(4, jump-start);
+                animation-timing-function: steps(10, jump-end);
+                animation-timing-function: steps(20, jump-none);
+                animation-timing-function: steps(5, jump-both);
+                animation-timing-function: steps(6, start);
+                animation-timing-function: steps(8, end);
+                animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+                animation-direction: normal;
+                animation-direction: reverse;
+                animation-direction: alternate;
+                animation-direction: alternate-reverse;
+                animation-direction: normal, reverse;
+                animation-direction: alternate, reverse, normal;
+
+                animation: increasewidth 3s ease-in-out 3 alternate;                        /* apply animation in box */
+            }
+
+            @keyframes increasewidth {                                                      /* define animation with condition */
+                from {
+                    width: 300vw;
+                    height: 100vw;
+                }
+
+                to {
+                    height: 30vw;
+                    width: 30vw;
+                }
+            }
+
+            @keyframes animateimage {
+                0% {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                20% {
+                    width: 130px;
+                    height: 130px;
+                }
+
+                100% {
+                    width: 1190px;
+                    height: 1190px;
+                }
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .progress:hover {
+                width: 100vw;
+            }
+
+            .progress {
+                width: 1vw;
+                background: red;
+                height: 3px;
+                animation: progress 1s ease-in-out 1;
+                /* transition: width 3s ease-in-out; */
+            }
+
+            @keyframes progress {
+                0% {
+                    width: 0;
+                }
+
+                50% {
+                    width: 80vw;
+                }
+
+                100% {
+                    width: 100vw;
+                }
+            }
+
+            header {
+                height: 122px;
+                background: black;
+            }
+
+            .image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                animation: rotate 3s ease-in infinite 1s;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .slider {
+                background: white;
+                height: auto;
+                overflow: hidden;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+            @keyframes imgslider1 {
+                0%{
+                    transform: translate(-20vw);
+                }
+                50%{
+                    transform: translate(100vw);
+                }
+                100%{
+                    transform: translate(0vw);
+                }
+            }
+            @keyframes imgslider2 {
+                0%{
+                    transform: translate(0vw);
+                }
+                25%{
+                    transform: translate(50vw);
+                }
+                50%{
+                    transform: translate(-50vw);
+                }
+                75%{
+                    transform: translate(0vw);
+                }
+                100%{
+                    transform: translate(0vw);
+                }
+            }
+            @keyframes imgslider3 {
+                0%{
+                    transform: translate(30vw);
+                }
+                50%{
+                    transform: translate(-80vw);
+                }
+                100%{
+                    transform: translate(30vw);
+                }
+            }
+            img{
+                display: block;
+                margin: auto;
+            }
+            .img1{
+                width: 50vw;
+                transform: translate(0vw);
+                animation: imgslider1 3s ease-in-out 2s infinite;
+            }
+            .img2{
+                width: 30vw;
+                transform: translate(0vw);
+                /* animation: imgslider2 3s ease-in-out 2s infinite; */
+            }
+            .img3{
+                width: 50vw;
+                transform: translate(15vw);
+                animation: imgslider3 3s ease-in-out 2s infinite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="first">Pradhuman kumar</div>
+        <div id="second">from giridih</div>
+        <!-- <div id="third" style="background-color: yellow;">jharkhand</div>          for css -->
+        <div id="third">jharkhand</div>
+        <div class="red">Khirodhar mahto</div>
+        <div class="bg-blue">sumitra devi</div>
+
+        <section class="black">deepak kumar</section>
+        <section class="red bg-blue">rina verma</section>
+        <div>
+            <h1>welcome to css_selector part :-</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis omnis ad, odit eligendi
+            repudiandae sequi cum, cumque natus sunt dicta quasi quo ratione similique voluptates
+            suscipit expedita fugit, accusantiumet nisi enim accusamus recusandae. Facere autem nam
+            consequuntur tempora earum voluptates harum tenetur molestiae quos minima, suscipit ipsam,
+            eaque eveniet.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut amet ipsum non?
+            Iusto, quo! Molestiae eaque ea quasi minima deserunt. Voluptatem non perspiciatis ut beatae
+            officiis cupiditate animi eaque vero.
+            <h2>selector part end</h2>
+        </div>
+        <div class="red"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta nemo laborum necessitatibus
+            quo id commodi aspernatur dolorem ipsam debitis facilis veritatis obcaecati eius, amet cupiditate soluta
+            fuga non saepe, aliquid blanditiis repellendus velit ducimus ad. Accusamus illo ipsam dolorem commodi
+            aliquid, ea perferendis in saepe vel magni repellat, fuga rerum sint sapiente ex architecto voluptate?
+            Incidunt recusandae, laborum excepturi ducimus quasi doloribus, itaque ut nostrum libero at aut adipisci
+            dolore quae delectus atque inventore numquam aspernatur culpa autem, maiores porro. Aperiam saepe esse
+            possimus. Ipsa ab similique, omnis natus libero dolorum magnam eos praesentium itaque. Voluptatum incidunt
+            dolorem rerum, voluptates veritatis deleniti alias? Maiores voluptatem facilis, tempora doloribus quasi esse
+            atque officia quod, officiis minus obcaecati asperiores nemo aperiam unde sequi cumque alias eum perferendis
+            dicta dolore sit assumenda. Temporibus minima consequatur, enim quam magnam fuga ex officia aperiam unde
+            numquam fugiat voluptatem facilis? Nisi quis culpa in ullam iure saepe id eos. Maxime reprehenderit quae
+            eaque non? Culpa earum eum molestiae rem dolor in architecto delectus nulla, et consequatur eligendi
+            necessitatibus sapiente unde rerum error praesentium soluta reprehenderit maxime adipisci magnam? Veritatis
+            aliquam nulla, earum pariatur animi ratione, totam, dolorem corporis! Possimus laudantium quidem, provident
+            quod natus nobis dolorum odio commodi nisi soluta! Doloribus, nam? Ea veniam dolore assumenda consectetur
+            accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam magni velit corporis
+            quas
+            debitis reiciendis,quisquam sint neque in culpa est eaque reprehenderit illo rem! Illo aperiam omnis velit
+            ipsum voluptatum non tempore maiores facere asperiores id reprehenderit hic error quidem consequatur quae
+            eius necessitatibus quibusdam, eveniet odit Est.</div><br>
+        <div class="green"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum sint quibusdam fuga
+            nesciunt atque beatae incidunt nemo, unde doloremque quaerat! Quisquam reprehenderit vero soluta reiciendis
+            excepturi cumque cum, officiis ratione aliquid vel eum sed rem minima quo minus cupiditate nemo omnis? Minus
+            cupiditate nam excepturi facilis distinctio. Exercitationem quidem iste in atque dolorem. Inventore maiores
+            harum aspernatur provident necessitatibus tempora esse recusandae quae soluta laboriosam vel nemo aliquid
+            est eos ea nisi laudantium incidunt magni commodi, ipsa atque corrupti nihil? Temporibus, suscipit maxime
+            totam, possimus voluptas corporis, et vero nemo sit adipisci iure dolor repudiandae! Aliquid cumque quia
+            molestias illum eum laboriosam sunt hic porro, facere eaque est ad dolores vitae omnis? Reiciendis,
+            reiciendis consequuntur cumque voluptates! Eius porro repellat nulla sint obcaecati? Quis aut voluptate
+            officia? Impedit nulla iure pariatur, exercitationem corporis ut. Rem sit numquam repellat nisi commodi iste
+            ducimus quod cumque odit dolor, adipisci magni blanditiis consectetur provident enim dicta quis, ipsa optio
+            eveniet consequatur laudantium aliquam maiores distinctio. Sapiente sunt numquam laborum, nemo officiis
+            consectetur id voluptatem iusto eos beatae fugit mollitia architecto minus cum ullam exercitationem, magni
+            quo accusantium iste nihil. Ea tenetur vero dolorum!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quam veniam itaque sapiente! Rerum
+            recusandae sequi incidunt voluptas asperiores vero unde voluptate illum cumque, ut iusto deserunt! Sed
+            recusandae non corporis, nobis possimus, itaque consectetur, perferendis eveniet obcaecati omnis ex sint.
+            Hic, cupiditate odit.</div>
+
+        <br>
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto ipsa ea
+            autem id, laborum nulla eum illo corrupti ullam odit dolore, aperiam voluptates quae eos deserunt delectus
+            hic nam. Maxime, enim. Repellat dolores, aspernatur necessitatibus alias quia quae. Assumenda labore quas
+            veritatis blanditiis illum tempore repudiandae in nobis placeat ad eligendi aspernatur, sequi accusamus
+            aliquam quo harum cum dignissimos, molestiae iste esse maxime maiores. Odit quidem non sed eum, tempore
+            facilis ut vitae error molestiae enim dolores temporibus at hic similique ratione eius iste maiores
+            consequatur expedita suscipit! Dolores vel molestias dolore soluta. Quibusdam cum, eos exercitationem
+            blanditiis unde eveniet vero, laudantium eligendi, consequatur incidunt reprehenderit ducimus voluptatibus!
+            Est enim nihil sint vero, quo inventore nisi incidunt quidem, aliquam praesentium in commodi at expedita
+            cupiditate voluptatem delectus doloribus illum exercitationem odio impedit maxime quaerat dolor. Adipisci
+            laboriosam dolore modi magni natus blanditiis odit explicabo alias ad est amet, maiores voluptas voluptates?
+            Ducimus quos quidem esse nisi saepe, culpa blanditiis doloremque eum sequi sunt, aut quis mollitia eos
+            voluptate, delectus aliquam! Veniam obcaecati provident inventore doloremque nihil!Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Earum explicabo qui est quam
+            natus sit tempore libero quidem et nostrum! Ut eaque, recusandae ea incidunt quasi deleniti expedita
+            corporis saepe asperiores fuga sapiente maiores adipisci!</div><br>
+        <div class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas ab ullam
+            perferendis quas, hic nesciunt incidunt. Numquam ullam ea, iure nihil debitis distinctio cupiditate
+            voluptatum omnis laborum est architecto quo tempora quia veritatis, dignissimos laboriosam illum
+            autem veniam nostrum, ab quos sequi nobis ex. Deleniti quia accusamus harum recusandae.</div>
+
+        <br>
+        <div class="redd">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti sit fugit assumenda ratione
+            architecto hic. Quaerat, dicta aliquid impedit facere necessitatibus illo tempora delectus eos, eveniet
+            quasi, sint tempore minus! <div class="box">Lorem ipsum dolor sit.</div>
+        </div><br>
+
+        <div class="box1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolore quasi tempore illum
+            alias magnam quam culpa perferendis! Nulla doloremque iure odio, dicta eveniet accusantium praesentium optio
+            architecto! Odit corrupti ipsum magnam nisi voluptatibus!</div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, delectus? Totam, repudiandae
+            dolorum recusandae reiciendis, illum commodi veniam nam itaque velit fuga omnis rerum architecto cum ipsa
+            quasi laudantium blanditiis soluta illo.</div>
+
+        <br>
+        <div class="a">Lorem Maiores placeat sit unde porro suscipit
+            et doloremque ad nemo quasi consequatur aliquam omnis
+            facere!</div>
+        <div class="b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto veniam similique ut
+            deserunt quod dolore provident eos? Ipsam porro quibusdam minima obcaecati ratione non mollitia adipisci
+            modi ullam iusto? Dolorem, illum?</div><br>
+        <div class="c">myself pk from giridih. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nobis
+            quis beatae cumque nihil quam rem exercitationem debitis perferendis sequi? Exercitationem voluptas
+            aspernatur aliquid ad, beatae provident nihil, obcaecati labore ipsa rerum laborum ipsam, unde
+            eaque? Rem quos consequuntur blanditiis itaque exercitationem impedit eos earum voluptatum. Atque
+        </div>
+
+        <br>
+        <div class="d">
+            <p> [ # 2em = 24*2 =48px ,# 2rem = 2*(html_font_size = 16px default) = 32px ,#
+                50vw = half of width ,# 50vh = half of height ,# 50% half of full size, ]
+                ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur dolorum praesentium
+                aliquid rem consectetur earum ullam incidunt ipsam ut. Explicabo ea non ex? Sed?</p>
+            <div class="e"> " Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus amet consectetur
+                vero
+                <div class="f"> non, architecto, odio natus necessitatibus asperiores sit molestiae voluptate adipisci
+                    veniam </div>
+                <div class="g">explicabo voluptatem beatae accusamus veritatis aperiam sunt ipsum rerum expedita.</div>
+            </div>
+        </div>
+        <div class="h">min-max height-width = min-height ,max-height, min-width, max-width Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Unde quia ab maxime vitae veniam omnis facilis magni quasi! Libero nihil vero
+            maiores minima consectetur alias quo iste odio fugiat modi commodi voluptate, dolore ipsum voluptatum
+            dolores illo unde recusandae. Numquam esse ducimus eos tenetur provident? Voluptatem pariatur dolore
+            repellat minima placeat illum optio ratione provident, excepturi qui assumenda sit, esse eligendi hic vero
+            tempora vitae explicabo velit voluptatibus neque a omnis dolorum ullam amet reprehenderit, ipsa quam
+            laboriosam. Non corrupti numquam repellendus exercitationem, ducimus quam quis impedit quod quisquam dolor
+            expedita quae molestiae. Hic, corporis! Ipsam sed, quia molestias cupiditate quae itaque maxime nobis
+            architecto ad consectetur debitis, magnam sequi dicta sint! Error reprehenderit,nemo quod, dolores
+            asperiores saepe? Dicta voluptatem iusto porro?</div>
+        <header>
+            <nav>
+                <ul>
+                    <li>pradhuman</li>
+                    <li>kumar</li>
+                    <li>verma</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="j">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam a, libero cum nisi
+            architecto voluptate quod omnis totam, quas, corrupti voluptates alias? Doloribus, incidunt.
+            <div class="k">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quo!</div>
+        </div>
+
+        <br>
+        <div class="container2">
+            <div class="box6">box4</div>
+            <div class="box7">box5</div>
+            <div class="box8">box6</div>
+            <div class="box7">box7</div>
+            <div class="box8">box8</div>
+        </div><br>
+        <div class="box3">box1</div>
+        <div class="box4">box2</div>
+        <div class="box5">box3</div>
+
+        <br>
+        <div class="contain">
+            <div class="item" style="background-color:violet;">1</div>
+            <div class="item" style="background-color:blue;">2</div>
+            <div class="item" style="background-color:gold;">3</div>
+            <div class="item" style="background-color:indigo;">4</div>
+            <div class="item" style="background-color:orange ;">5</div>
+            <div class="item" style="background-color:red ;">6</div>
+            <div class="item" style="background-color:indianred ;">7</div>
+            <div class="item" style="background-color:black ;">8</div>
+            <div class="item" style="background-color:bisque;">9</div>
+            <div class="item" style="background-color:blueviolet;">10</div>
+            <div class="item" style="background-color:green;">11</div>
+            <div class="item" style="background-color:grey ;">12</div>
+            <div class="item" style="background-color:ivory;">13</div>
+            <div class="item" style="background-color:blanchedalmond;">14</div>
+        </div>
+        <div class="item14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magni
+            similique eum, itaque impedit eveniet deserunt vel harum tempora iusto aliquam placeat amet inventore
+            soluta dolor provident doloremque sapiente!</div>
+        </div>
+
+        <br>
+        <div class="container">
+            <div class="box">
+                <img id="myImage" src="https://source.unsplash.com/960x520/?nature,water">
+                <button id="btn">Toggle</button>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="boxx">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quae unde, incidunt laudantium sunt
+                molestias ad impedit consectetur, tempora mollitia dolorem nemo quod asperiores nobis illo eius
+                voluptatem quas magni?
+            </div>
+        </div>
+        <div class="progress"></div>
+<header>
+    <main>
+        <img class="image" src="6.jpg">
+        <div class="slider">
+            <img class="img1" src="https://source.unsplash.com/collection/190727/1600x900">
+            <img class="img2" src="https://source.unsplash.com/collection/190727/1600x901">
+            <img class="img3" src="https://source.unsplash.com/collection/190727/1600x902">
+        </div>
+    </main>
+</header>
+    </body>
+
+    <!-- javascript code for animation  -->
+    <script>
+        myImage.style.width = '146px';
+        btn.addEventListener("click", () => {
+            myImage.style.height = '456px';
+            if (myImage.style.width === '546px') {
+                myImage.style.width = "146px";
+            }
+            else if (myImage.style.width === '146px') {
+                myImage.style.width = "546px";
+            }
+        })
+    </script>
+
+</html>

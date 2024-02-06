@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transform, transition and animation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column-gap: 10px;
+                background: rebeccapurple;
+                height: 80vh;
+                padding: 10px;
+            }
+
+            .box {
+                border: 2px solid red;
+                width: 30vw;
+                height: 30vh;
+                /* transform: none; */
+                /* transform: matrix(1, 2, 3, 4, 5, 6); */
+                /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+                /* transform: perspective(17px); */
+                /* transform: rotate(0.5turn); */
+                /* transform: rotate3d(1, 2, 3, 10deg); */
+                /* transform: rotateX(10deg); */
+                /* transform: rotateY(10deg); */
+                /* transform: rotateZ(10deg); */
+                /* transform: translate(12px, 50%); */
+                /* transform: translate3d(12px, 50%, 3em); */
+                /* transform: translateX(2em); */
+                /* transform: translateY(3in); */
+                /* transform: translateZ(2px); */
+                /* transform: scale(2, 0.5); */
+                /* transform: scale3d(2.5, 1.2, 0.3); */
+                /* transform: scaleX(2); */
+                /* transform: scaleY(0.5); */
+                /* transform: scaleZ(0.3); */
+                /* transform: skew(30deg, 20deg); */
+                /* transform: skewX(30deg); */
+                /* transform: skewY(1.07rad); */
+                /* transform: translateX(10px) rotate(10deg) translateY(5px); */
+                /* transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg); */
+            }
+
+            img:hover {
+                width: 70vw;
+                height: 70vw;
+            }
+
+            img {
+                width: 70vw;
+                height: 70vw;
+
+                /* transition-property: none; */
+                transition-property: width;
+                /* transition-property: all; */
+                /* transition-property: test_05; */
+                /* transition-property: -specific; */
+                /* transition-property: sliding-vertically; */
+                /* transition-property: test1, animation4; */
+                /* transition-property: all, height, color; */
+                /* transition-property:all,-moz-specific,sliding; */
+
+                transition-delay: 3s;
+                /* transition-delay: 2s, 4ms; */
+                /*                              */
+                transition-duration: 1s;
+                /* transition-duration: 120ms; */
+                /* transition-duration: 1s, 15s; */
+                /* transition-duration: 10s, 30s, 230ms; */
+                /*                              */
+                /* transition-timing-function: ease; */
+                transition-timing-function: ease-in;
+                /* transition-timing-function: ease-out; */
+                /* transition-timing-function: ease-in-out; */
+                /* transition-timing-function: linear; */
+                /* transition-timing-function: step-start; */
+                /* transition-timing-function: step-end; */
+                /* transition-timing-function: steps(4, jump-end); */
+                /* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1); */
+                /* transition-timing-function: steps(4, jump-start); */
+                /* transition-timing-function: steps(10, jump-end); */
+                /* transition-timing-function: steps(20, jump-none); */
+                /* transition-timing-function: steps(5, jump-both); */
+                /* transition-timing-function: steps(6, start); */
+                /* transition-timing-function: steps(8, end); */
+                /* transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1); */
+
+                transition: width 3s 1s ease-in-out;
+                /* transition: width 1s ease-in-out, height 4s ease-in; */
+            }
+
+            #myImage {
+                width: 30vw;
+                height: 30vh;
+                animation: animateimage 3s ease-in-out 3 alternate;
+            }
+
+            .container {
+                height: 100vh;
+                width: 100vw;
+                background: yellow;
+            }
+
+            .boxx {
+                background: black;
+                color: white;
+                width: 300px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                animation-name: increasewidth;
+
+                animation-duration: 3s;
+
+                animation-delay: 1s;
+
+                animation-iteration-count: 3;
+                animation-timing-function: ease-in-out;
+
+
+                animation-direction: normal;
+                animation-direction: reverse;
+                animation-direction: alternate;
+                animation-direction: alternate-reverse;
+
+                animation: increasewidth 3s ease-in-out 3 alternate;
+            }
+
+            @keyframes increasewidth {
+                from {
+                    width: 300vw;
+                    height: 100vw;
+                }
+
+                to {
+                    height: 30vw;
+                    width: 30vw;
+                }
+            }
+
+            @keyframes animateimage {
+                0% {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                20% {
+                    width: 130px;
+                    height: 130px;
+                }
+
+                100% {
+                    width: 1190px;
+                    height: 1190px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="box">
+                <img id="myImage" src="https://source.unsplash.com/960x520/?nature,water">
+                <button id="btn">Toggle</button>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="boxx">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quae unde, incidunt laudantium sunt
+                molestias ad impedit consectetur, tempora mollitia dolorem nemo quod asperiores nobis illo eius
+                voluptatem quas magni?
+            </div>
+        </div>
+    </body>
+    <script>
+        myImage.style.width = '146px';
+        btn.addEventListener("click", () => {
+            myImage.style.height = '456px';
+            if (myImage.style.width === '546px') {
+                myImage.style.width = "146px";
+            }
+            else if (myImage.style.width === '146px') {
+                myImage.style.width = "546px";
+            }
+        })
+    </script>
+
+</html>

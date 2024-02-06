@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>color an dbackground</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .red {
+                /* background: red; */
+                /* bg:red */
+                color: black;
+            }
+
+            .green {
+                background: green;
+                color: aqua;
+            }
+
+            .container {
+                width: 99%;
+                /* height: 334px; */
+                border: 3px solid red;
+                background: rgb(94, 26, 184);
+                color: yellow;
+                background-image: url("1.jpg");
+
+                /* background-repeat: repeat-x; */                                  /* image repeated in x axis */
+                /* background-repeat: repeat-y;                                     /* image repeated in y axis */
+                background-repeat: no-repeat;                                       /* image not repeated  */
+                /* background-repeat: space; */                                     /* image not cut but give space between two image if required */
+                /* background-repeat: round; */                                     /* image not cur and round */
+
+                /* background-size: contain;                                        save image in such a way that image is shown perfectily */
+                /* background-size: cover;                                          it set image in such a way that full box is filled */
+                background-size: auto;                                              /* in this box fill a/q to image size */
+                /* background-size: 423px ;                                         here width is fixed */
+                /* background-size: 223px 325px;                                    here width and height are fixed */
+
+                /* background-position: top center;                                 in which place image is placed in box */   
+                /* background-position: bottom center; */
+                background-position: center;
+                /* background-position: 25% 75% ; */
+                /* background-position: bottom 50px right 70px; */
+                /* background-position: right 35px bottom 75px; */
+                /* background-position: top right; */
+                /* background-position: bottom left; */
+
+                /* background-attachment: scroll;                                   scroll means image and text scroll at a time but inside slidebar scroll only text */
+                background-attachment: fixed;                                       /* fixed means image is fixed but text is scrolled */   
+                /* background-attachment: local;                                    local means image and text scroll at a time but inside slidebar also scroll image and text at a time */
+            }
+
+            body {
+                background-image: url("2.jpg");
+                background-size: 1000px, 1000px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            .blue{
+                width: 400px;
+                height: 800px;
+                border: 2px solid red;
+                background: red url('3.jpg') no-repeat local center right;  /* color image repeat attachment position; use this in place of all background key value pair by space separated.*/
+                background-size: 223px 223px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="red"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta nemo laborum necessitatibus
+            quo id commodi aspernatur dolorem ipsam debitis facilis veritatis obcaecati eius, amet cupiditate soluta
+            fuga non saepe, aliquid blanditiis repellendus velit ducimus ad. Accusamus illo ipsam dolorem commodi
+            aliquid, ea perferendis in saepe vel magni repellat, fuga rerum sint sapiente ex architecto voluptate?
+            Incidunt recusandae, laborum excepturi ducimus quasi doloribus, itaque ut nostrum libero at aut adipisci
+            dolore quae delectus atque inventore numquam aspernatur culpa autem, maiores porro. Aperiam saepe esse
+            possimus. Ipsa ab similique, omnis natus libero dolorum magnam eos praesentium itaque. Voluptatum incidunt
+            dolorem rerum, voluptates veritatis deleniti alias? Maiores voluptatem facilis, tempora doloribus quasi esse
+            atque officia quod, officiis minus obcaecati asperiores nemo aperiam unde sequi cumque alias eum perferendis
+            dicta dolore sit assumenda. Temporibus minima consequatur, enim quam magnam fuga ex officia aperiam unde
+            numquam fugiat voluptatem facilis? Nisi quis culpa in ullam iure saepe id eos. Maxime reprehenderit quae
+            eaque non? Culpa earum eum molestiae rem dolor in architecto delectus nulla, et consequatur eligendi
+            necessitatibus sapiente unde rerum error praesentium soluta reprehenderit maxime adipisci magnam? Veritatis
+            aliquam nulla, earum pariatur animi ratione, totam, dolorem corporis! Possimus laudantium quidem, provident
+            quod natus nobis dolorum odio commodi nisi soluta! Doloribus, nam? Ea veniam dolore assumenda consectetur
+            accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam magni velit corporis
+            quas
+            debitis reiciendis,quisquam sint neque in culpa est eaque reprehenderit illo rem! Illo aperiam omnis velit
+            ipsum voluptatum non tempore maiores facere asperiores id reprehenderit hic error quidem consequatur quae
+            eius necessitatibus quibusdam, eveniet odit Est.</div>
+            
+            <br>
+        <div class="green"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum sint quibusdam fuga
+            nesciunt atque beatae incidunt nemo, unde doloremque quaerat! Quisquam reprehenderit vero soluta reiciendis
+            excepturi cumque cum, officiis ratione aliquid vel eum sed rem minima quo minus cupiditate nemo omnis? Minus
+            cupiditate nam excepturi facilis distinctio. Exercitationem quidem iste in atque dolorem. Inventore maiores
+            harum aspernatur provident necessitatibus tempora esse recusandae quae soluta laboriosam vel nemo aliquid
+            est eos ea nisi laudantium incidunt magni commodi, ipsa atque corrupti nihil? Temporibus, suscipit maxime
+            totam, possimus voluptas corporis, et vero nemo sit adipisci iure dolor repudiandae! Aliquid cumque quia
+            molestias illum eum laboriosam sunt hic porro, facere eaque est ad dolores vitae omnis? Reiciendis,
+            reiciendis consequuntur cumque voluptates! Eius porro repellat nulla sint obcaecati? Quis aut voluptate
+            officia? Impedit nulla iure pariatur, exercitationem corporis ut. Rem sit numquam repellat nisi commodi iste
+            ducimus quod cumque odit dolor, adipisci magni blanditiis consectetur provident enim dicta quis, ipsa optio
+            eveniet consequatur laudantium aliquam maiores distinctio. Sapiente sunt numquam laborum, nemo officiis
+            consectetur id voluptatem iusto eos beatae fugit mollitia architecto minus cum ullam exercitationem, magni
+            quo accusantium iste nihil. Ea tenetur vero dolorum!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quam veniam itaque sapiente! Rerum
+            recusandae sequi incidunt voluptas asperiores vero unde voluptate illum cumque, ut iusto deserunt! Sed
+            recusandae non corporis, nobis possimus, itaque consectetur, perferendis eveniet obcaecati omnis ex sint.
+            Hic, cupiditate odit.</div>
+
+            <br>
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto ipsa ea
+            autem id, laborum nulla eum illo corrupti ullam odit dolore, aperiam voluptates quae eos deserunt delectus
+            hic nam. Maxime, enim. Repellat dolores, aspernatur necessitatibus alias quia quae. Assumenda labore quas
+            veritatis blanditiis illum tempore repudiandae in nobis placeat ad eligendi aspernatur, sequi accusamus
+            aliquam quo harum cum dignissimos, molestiae iste esse maxime maiores. Odit quidem non sed eum, tempore
+            facilis ut vitae error molestiae enim dolores temporibus at hic similique ratione eius iste maiores
+            consequatur expedita suscipit! Dolores vel molestias dolore soluta. Quibusdam cum, eos exercitationem
+            blanditiis unde eveniet vero, laudantium eligendi, consequatur incidunt reprehenderit ducimus voluptatibus!
+            Est enim nihil sint vero, quo inventore nisi incidunt quidem, aliquam praesentium in commodi at expedita
+            cupiditate voluptatem delectus doloribus illum exercitationem odio impedit maxime quaerat dolor. Adipisci
+            laboriosam dolore modi magni natus blanditiis odit explicabo alias ad est amet, maiores voluptas voluptates?
+            Ducimus quos quidem esse nisi saepe, culpa blanditiis doloremque eum sequi sunt, aut quis mollitia eos
+            voluptate, delectus aliquam! Veniam obcaecati provident inventore doloremque nihil!Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Earum explicabo qui est quam
+            natus sit tempore libero quidem et nostrum! Ut eaque, recusandae ea incidunt quasi deleniti expedita
+            corporis saepe asperiores fuga sapiente maiores adipisci!</div>
+
+            <br>
+            <div class="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi voluptas ab ullam 
+                perferendis quas, hic nesciunt incidunt. Numquam ullam ea, iure nihil debitis distinctio cupiditate 
+                voluptatum omnis laborum est architecto quo tempora quia veritatis, dignissimos laboriosam illum 
+                autem veniam nostrum, ab quos sequi nobis ex. Deleniti quia accusamus harum recusandae.</div>
+
+    </body>
+
+</html>

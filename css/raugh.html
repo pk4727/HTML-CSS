@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raugh</title>
+        <!-- 1st 
+            <style>
+            #head {
+                background-color: red;
+            }
+            .one{
+                background: yellow;
+                color: red;
+            }
+            .red{
+                background: red;
+                color:red;
+            }
+            .blue{
+                background: blue;
+            }
+        </style> 
+-->
+        <!-- 2nd 
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            nav {
+                background: darkblue;
+                color: lightpink;
+                width: 99%;
+            }
+
+            #head {
+                background: blue;
+                color: lightgreen;
+            }
+
+            div.red,
+            blue {
+                background-image: url('3.jpg');
+                background-size: 100px 100px;
+                background-repeat: no-repeat;
+            }
+
+            div.one {
+                width: 330px;
+                height: 700px;
+                background: red url('2.jpg') no-repeat;
+                background-size: 300px 250px;
+            }
+        </style>
+-->
+        <!-- 3rd 
+        <style>
+            * {
+                margin: 3;
+                padding: 3;
+            }
+            header {
+                background: red;
+                color: white;
+                border: 4px dotted black;
+                width: 96.5%;
+                margin: 10px;
+            }
+            .content {
+                background: yellow;
+                columns: black;
+                height: 200px;
+                width: 97%;
+                padding: 10px;
+                margin: 10px;
+            }
+            footer {
+                background: lightblue;
+                color: blue;
+                width: 97%;
+                margin: 10px;
+            }
+            .k{
+                background: #000;
+                color: whitesmoke;
+                box-sizing: border-box;
+                border: 2px solid red;
+            }
+            .f,pre{
+                text-align: center;
+                margin: 10px;
+            }
+        </style>
+-->
+        <!-- 4th
+        <style>
+            .a {
+                display: block;
+                width: 90%;
+                text-align: center;
+                background: red;
+                color: black;
+            }
+            .b {
+                margin: 0px;
+                padding: 0px;
+                display: inline-block;
+                width: 45%;
+                height: 100px;
+                background: green;
+                color: blue;
+                /* visibility: hidden; */
+            }
+            .c {
+                width: 45%;
+                margin: 0px;
+                padding: 0px;
+                height: 100px;
+                display: inline-block;
+                background: blue;
+                color: red;
+                /* display:  none; */
+            }
+            .f {
+                font-family:'Baloo 2', cursive;
+            }
+            a{
+                text-decoration: none;
+            }
+            footer{
+                text-transform: uppercase;
+            }
+        </style>
+ -->
+        <!-- 5th 
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            nav {
+                width: 99%;
+                background: red;
+                font-weight: bold;
+                position: sticky;
+                top: 0;
+                left: 0;
+                left: 0.5%;
+            }
+            
+            li{
+            background: yellow;
+            display: inline-block;
+            margin: 20px;
+            font-size: 25px;
+            font-style: italic;
+            text-transform:capitalize;
+            }
+            /* li{ */
+                /* list-style: circle; */
+                /* list-style-position: inside; */
+            /* } */
+
+            body {
+                height: 200%;
+                background: palevioletred;
+            }
+
+            .red_blue {
+                width: 10%;
+            }
+
+            .g{
+                z-index: 10;
+                margin: 20px;
+                padding: 20px;
+            }
+        </style>
+-->
+        <!-- 6th 
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background: black;
+                color: white;
+                width: 100%;
+                height: 10vh;
+                font-size: 10vh;
+                padding-left: 10vw;
+            }
+
+            li {
+                display: inline;
+                list-style: none;
+                padding: 4vw;
+            }
+
+            .container1 {
+                background: red;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .b1 {
+                background: green;
+                width: 45%;
+                height: 200px;
+                color: black;
+                /* float: left; */
+            }
+
+            .b2 {
+                background: blue;
+                width: 45%;
+                height: 200px;
+                color: #000;
+                align-items: end;
+                /* float: right; */
+            }
+        </style>
+-->
+        <!-- 7th
+        <style>
+            .header7 {
+                display: grid;
+                margin: 10px;
+                padding: 10px;
+                grid-gap: 10px 30px;
+                grid-template-columns: auto auto auto auto auto auto;
+                justify-content: center;
+                border: 2px solid blue;
+                background: red;
+                font-size: 25px;
+            }
+
+            .text {
+                background: wheat;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 2px solid black;
+                border-radius: 15px;
+            }
+
+            .layout1 {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 30px 100px;
+            }
+
+            .box1 {
+                background: yellowgreen;
+                border: 2px solid red;
+            }
+
+            .box {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: 100px;
+                padding: 50px;
+                justify-content: space-around;
+            }
+
+            .box2 {
+                background: yellowgreen;
+                color: red;
+                border: 2px solid red;
+                width: 15vw;
+                height: 15vw;
+            }
+
+            .layout2 {
+                background: yellow;
+                width: 100%;
+                height: 60vh;
+            }
+
+            @media screen and (max-width:1100px) {
+                .box2 {
+                    background: black;
+                    color: yellow;
+                }
+            }
+
+            @media screen and (max-width:800px) {
+                .box2 {
+                    background: red;
+                    color: black;
+                }
+            }
+
+            @media screen and (max-width:500px) {
+                .box2 {
+                    background: blue;
+                    color: white;
+                }
+
+            }
+        </style>
+-->
+        <!-- 8th -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .progress:hover {
+                width: 100vw;
+            }
+
+            .progress {
+                width: 1vw;
+                background: red;
+                height: 3px;
+                animation: progress 1s ease-in-out 1;
+                /* transition: width 3s ease-in-out; */
+            }
+
+            @keyframes progress {
+                0% {
+                    width: 0;
+                }
+
+                50% {
+                    width: 80vw;
+                }
+
+                100% {
+                    width: 100vw;
+                }
+            }
+
+            header {
+                height: 122px;
+                background: black;
+            }
+
+            .image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                /* animation: rotate 3s ease-in infinite 1s; */
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .slider {
+                background: white;
+                height: 523px;
+                overflow: hidden;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+            @keyframes imgslider1 {
+                0%{
+                    transform: translate(-20vw);
+                }
+                50%{
+                    transform: translate(100vw);
+                }
+                100%{
+                    transform: translate(0vw);
+                }
+            }
+            @keyframes imgslider2 {
+                0%{
+                    transform: translate(0vw);
+                }
+                25%{
+                    transform: translate(50vw);
+                }
+                50%{
+                    transform: translate(-50vw);
+                }
+                75%{
+                    transform: translate(0vw);
+                }
+                100%{
+                    transform: translate(0vw);
+                }
+            }
+            @keyframes imgslider3 {
+                0%{
+                    transform: translate(30vw);
+                }
+                50%{
+                    transform: translate(-80vw);
+                }
+                100%{
+                    transform: translate(30vw);
+                }
+            }
+            img{
+                display: block;
+                margin: auto;
+            }
+            .img1{
+                width: 50vw;
+                transform: translate(0vw);
+                animation: imgslider1 3s ease-in-out 2s infinite;
+            }
+            .img2{
+                width: 30vw;
+                transform: translate(0vw);
+                /* animation: imgslider2 3s ease-in-out 2s infinite; */
+            }
+            .img3{
+                width: 50vw;
+                transform: translate(15vw);
+                animation: imgslider3 3s ease-in-out 2s infinite;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="progress"></div>
+        <header>
+            <main>
+                <!-- <img class="image" src="6.jpg"> -->
+                <div class="slider">
+                    <img class="img1" src="https://source.unsplash.com/collection/190727/1600x900">
+                    <img class="img2" src="https://source.unsplash.com/collection/190727/1600x901">
+                    <img class="img3" src="https://source.unsplash.com/collection/190727/1600x902">
+                </div>
+            </main>
+        </header>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="css5.html">pradhuman</a></li>
+                    <li><a href="css4.html">kumar</a></li>
+                    <li><a href="css3.html">verma</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container1">
+            <div class="b1">box1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis quos distinctio
+                accusamus aliquam reiciendis minus! Officia at porro quasi commodi modi ex.</div>
+            <div class="b2">box2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi porro, omnis earum
+                temporibus enim cupiditate labore amet facere neque necessitatibus saepe tenetur atque consequuntur hic.
+            </div>
+        </div>
+
+        <!-- <div id="head" style="background-color: red";>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem praesentium  -->
+        <div id="head" ;>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem praesentium
+            aut delectus tempora porro illum quod quia quisquam! Eveniet velit excepturi molestiae asperiores quae
+            tempora, impedit,
+            reiciendis cumque quos libero laudantium commodi, alias maiores recusandae neque autem doloribus. Nisi
+            dolores tempora quidem
+            adipisci repellat cumque dolore qui eaque at assumenda.
+        </div>
+        <div class="one"> one Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab soluta quod repudiandae sint
+            dignissimos ratione impedit explicabo dolorum, minus aliquam non deleniti unde cupiditate, blanditiis
+            voluptas excepturi officiis cum totam. </div>
+        <div class="two">one overridden</div>
+        <div class="g">
+            <li>khirodhar</li><br>
+            <li>mahto</li><br>
+            <li>sumitra</li><br>
+            <li>devi</li>
+        </div>
+        <div class="red_blue">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque sit magnam dolor aliquid
+            eius odio, provident ab id placeat non dicta doloremque commodi iure fugiat. Incidunt aliquam quas error
+            dolores pariatur culpa voluptatem aut cumque fuga eos magni rem sunt dolorem eveniet quae, illum assumenda
+            fugit dolor id labore at!multiple name but color given in space separated command when in css we set red and
+            blue
+            individual with feature then the last modified is reflected in page</div>
+
+        <header>
+            <ul id="a">
+                <li id="pic"><a href="1.jpg"></a></li>
+                <li>Home</li>
+                <li>description</li>
+                <li>contect</li>
+            </ul>
+        </header>
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum omnis ratione quos sed
+            officia quia beatae,<div class="k">Lorem ipsum dolor sit amet.</div>
+            repellendus sequi dolorum quibusdam! Quasi optio vitae, ratione nobis dolor, minus iste et, quibusdam amet
+            in next the part two box are not atteched fully and take a gpe of little px which is removed by
+            removing space between two div which is in that part</div>
+        <div class="a">Myself</div>
+        <div class="b">Pradhuman</div>
+        <div class="c">kumar</div>
+
+        <div class="header7">
+            <div class="text">text1</div>
+            <div class="text">text2</div>
+            <div class="text">text3</div>
+            <div class="text">text4</div>
+            <div class="text">text5</div>
+            <div class="text">text6</div>
+        </div>
+
+        <br>
+        <div class="layout1">
+            <div class="box1">heading</div>
+            <div class="box1">image</div>
+        </div>
+        <div class="layout2">
+            <div class="box">
+                <div class="box2">box1 Lorem ipsum dolor</div>
+                <div class="box2">box2 Lorem ipsum dolor</div>
+                <div class="box2">box3 Lorem ipsum dolor</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="f">@ My <a href="#">Name</a> is pk.</div>
+        </footer>
+    </body>
+
+</html>

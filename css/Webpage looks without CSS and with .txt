@@ -1,0 +1,15 @@
+Webpage looks without CSS and with CSS, you can see that when CSS is not applied in web page then the looks of webpage is totally different but when CSS is apply in webpage it looks quite different and attractive.
+
+eg.
+
+It is like a gardener who cut the extra part of plant and it comes into a specific shape which looks good,
+
+ in such way CSS gives a different looks for  webpage which is attractive (Here CSS arrange items into a specific manner which is good looking and attractive)
+
+I am happy to share that, I have completed Flipcart_clone using CSS and HTML. #HTML #CSS #Flipkart
+
+CSS (Cascading Style Sheets) is used to style and layout web pages —for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
+Types of CSS :- (all are used here)
+Inline CSS.
+Internal or Embedded CSS.
+External CSS.

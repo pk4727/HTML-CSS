@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header start */
+header {
+    background: #2874f0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    overflow: scroll;
+}
+
+/* flipkart logo  */
+.logo {
+    padding: 1vh 1vh 1vh 15vh;
+    /* background: #000; */
+}
+
+nav div a {
+    color: white;
+    font-size: 1.8vh;
+    text-decoration: none;
+}
+
+.logo1 img {
+    display: block;
+    width: 99%;
+    height: 3vh;
+}
+
+.logo2 img {
+    display: inline-block;
+    width: 1vw;
+    height: 3vh;
+}
+#ex:hover{
+    color: yellow;
+    font-weight: bold;
+}
+input {
+    margin-left: 3vw;
+    width: 35vw;
+    height: 20px;
+}
+
+button {
+    margin-left: 2px;
+    margin-right: 3vw;
+    border-radius: 4px;
+}
+
+button:hover {
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+/* button  */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background: green; */
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 10vh 0 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: gold;
+    font-weight: bold;
+}
+
+/* item list started */
+nav .items {
+    /* background: wheat; */
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.items a {
+    color: black;
+    justify-content: center;
+}
+
+/* main section */
+main {
+    min-height: 81.5vh;
+    /* background: blueviolet; */
+}
+
+main .slider {
+    width: 90vw;
+    margin: 10px auto;
+    display: flex;
+    overflow: hidden;
+    animation: slider_style 15s ease-in-out 3s infinite;
+}
+
+@keyframes slider_style {
+    0% {
+        transform: translate(-0vw);
+    }
+
+    30% {
+        transform: translate(60vw);
+    }
+
+    70% {
+        transform: translate(-45vw);
+    }
+    100% {
+        transform: translate(-0vw);
+    }
+}
+
+.card {
+    margin-top: 3vh;
+}
+
+.card h2 {
+    font-family: 'Lato', sans-serif;
+    padding-left: 1vw;
+    ;
+}
+
+.cards {
+    display: flex;
+    max-width: 95vw;
+    overflow: scroll;
+}
+
+main .card-item {
+    display: inline-block;
+    padding: 1px 1vw;
+}
+
+main .card-item .lines {
+    text-align: center;
+}
+
+main .card-item:hover {
+    color: blue
+}
+p:hover{
+    font-weight: bold;
+}
+footer {
+    background: #2874f0;
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}

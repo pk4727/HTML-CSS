@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>size position list</title>
+        <style>
+            .d {
+                font-size: 20px;
+                background: yellow;
+                color: black;
+                height: 1000px;
+            }
+
+            .e {
+                width: 80vw;
+                height: 50vh;
+                font-size: 2em;
+                background: red;
+                color: black;
+            }
+            .f {
+                width: 50vh;
+                height: 50vw;
+                font-size: 2rem;
+                background: green;
+            }
+
+            .g {
+                width: 50%;
+                height: auto;
+                background: blue;
+            }
+
+            .h {
+                background: goldenrod;
+                min-width: 10vw;
+                max-width: 70vw;
+                min-height: 10vh;
+                max-height: 90vh;
+
+                /* width: 5vw; not work */
+                width: 60vw;
+                /* width: 70vw; not work  */
+                /* height: 5vh; not work  */
+                height: 80vh;
+                /* height: 95vh;   not work */
+            }
+
+            header {
+                background: black;
+                color: white;
+                height: auto;
+                padding: 10px;
+                text-align: center;
+            }
+
+            li {
+                list-style: square inside; /* url("#");  [shape from_bullet_place_which_side for_image] */
+                display: inline;
+            }
+            .j{
+                background: greenyellow;
+                width: 50%;
+                height: 200px;
+                margin: auto; /* means box set in center position */
+                border: 2px solid red;
+            }
+            .k{
+                background: blue;
+                width: 100px;
+                height: 100px;
+                /* z-index: 10; */ /* used when we want any page in upper layer of page always */
+
+                /* position: static; */ /* default */
+                /* top: 5px; not work */
+                /* left: 10px; */
+                /* right: 8px; */
+                /* bottom: 2px; */
+
+                /* position: relative; */
+                top: 15px;   /* working a/q html page */
+                left: 10px;
+                right: 8px;
+                bottom: 2px;
+
+                /* position: fixed; */
+                top: 5px;  /* working a/q place but fixed */
+                left: 10px;
+                right: 8px;
+                bottom: 2px;
+
+                /* position: absolute; */
+                top: 5px;
+                left: 10px;  /* work a/q to page */
+                right: 8px;
+                bottom: 2px;
+
+                /* position: sticky; */ /*  placed at one place and remaining are moving*/
+                /* top: 5px; */
+                /* left: 10px; */
+                /* right: 8px; */
+                /* bottom: 2px; */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="d">
+            <p> [ # 2em = 24*2 =48px ,# 2rem = 2*(html_font_size = 16px default) = 32px ,#
+                50vw = half of width ,# 50vh = half of height ,# 50% half of full size, ]
+                ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur dolorum praesentium
+                aliquid rem consectetur earum ullam incidunt ipsam ut. Explicabo ea non ex? Sed?</p>
+            <div class="e"> " Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus amet consectetur
+                vero
+                <div class="f"> non, architecto, odio natus necessitatibus asperiores sit molestiae voluptate adipisci
+                    veniam </div>
+                <div class="g">explicabo voluptatem beatae accusamus veritatis aperiam sunt ipsum rerum expedita.</div>
+            </div>
+        </div>
+        <div class="h">min-max height-width = min-height ,max-height, min-width, max-width Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Unde quia ab maxime vitae veniam omnis facilis magni quasi! Libero nihil vero
+            maiores minima consectetur alias quo iste odio fugiat modi commodi voluptate, dolore ipsum voluptatum
+            dolores illo unde recusandae. Numquam esse ducimus eos tenetur provident? Voluptatem pariatur dolore
+            repellat minima placeat illum optio ratione provident, excepturi qui assumenda sit, esse eligendi hic vero
+            tempora vitae explicabo velit voluptatibus neque a omnis dolorum ullam amet reprehenderit, ipsa quam
+            laboriosam. Non corrupti numquam repellendus exercitationem, ducimus quam quis impedit quod quisquam dolor
+            expedita quae molestiae. Hic, corporis! Ipsam sed, quia molestias cupiditate quae itaque maxime nobis
+            architecto ad consectetur debitis, magnam sequi dicta sint! Error reprehenderit,nemo quod, dolores
+            asperiores saepe? Dicta voluptatem iusto porro?</div>
+        <header>
+            <nav>
+                <ul>
+                    <li>pradhuman</li>
+                    <li>kumar</li>
+                    <li>verma</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="j">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam a, libero cum nisi
+            architecto voluptate quod omnis totam, quas, corrupti voluptates alias? Doloribus, incidunt.
+        <div class="k">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, quo!</div></div>
+    </body>
+
+</html>
